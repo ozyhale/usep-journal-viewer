@@ -1,0 +1,6 @@
+
+<hr>
+
+<footer>
+    <p>© Company 2013</p>
+</footer>
