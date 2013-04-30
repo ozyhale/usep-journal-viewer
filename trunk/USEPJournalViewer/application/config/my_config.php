@@ -4,7 +4,7 @@
  * application path
  */
 
-$config['path'] = 'C:/wamp/www/ICextensions/';
+$config['path'] = 'C:/wamp/www/USEPJournalViewer/';
 
 /*
  * index.php
