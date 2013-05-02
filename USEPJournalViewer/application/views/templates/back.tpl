@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap.css">
+        
         <style>
             body {
                 padding-top: 60px;
@@ -26,21 +27,23 @@
 
         <div class="container-fluid">
             <div class="row-fluid">
-                <div class="span3">
+                <div class="span8">
                     {*Sidebar*}
-                    {include file=$sidebar}
+                    {include file=$content}
                 </div>
 
-                <div class="span9">
+                <div class="span4">
 
                     {$alert}
 
                     {*Content*}
-                    {include file=$content}
+                    {include file=$sidebar}
                 </div>
             </div>
 
         </div>
+                
+
 
         {*Footer*}
         {include file=$footer}
