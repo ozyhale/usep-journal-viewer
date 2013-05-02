@@ -6,11 +6,12 @@
 
 $config['path'] = 'C:/wamp/www/USEPJournalViewer/';
 
+
 /*
- * index.php
- * (should be 'index.php' or an '' string)
+ * site name
  */
 
-$config['indexphp'] = ''; 
+$config['site_name'] = 'USEP Journal Viewer';
+
 
 ?>

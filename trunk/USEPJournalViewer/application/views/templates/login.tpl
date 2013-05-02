@@ -27,7 +27,7 @@
     
 <div class="row">
     <div class="span6 offset3">
-        <form method="post" class="form-horizontal">
+        <form method="post" class="form-horizontal" action="{$site_url}administrator/login">
             
             <legend>Administrator Login</legend>
              

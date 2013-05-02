@@ -6,15 +6,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">Project name</a>
+            <a class="brand" href="#">USEP Journal Viewer</a>
             <div class="nav-collapse collapse">
                 <p class="navbar-text pull-right">
                     Logged in as <a href="#" class="navbar-link">{$username}</a>
                 </p>
                 <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="{$site_url}administrator">Home</a></li>
+                    <li><a href="{$site_url}journals">Journals</a></li>
+                    <li><a href="#contact">Departments</a></li>
+                    <li><a href="#contact">Users</a></li>
                 </ul>
             </div>
         </div>

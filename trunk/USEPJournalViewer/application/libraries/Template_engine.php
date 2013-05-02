@@ -15,16 +15,21 @@ require_once 'smarty/Smarty.class.php';
 
 class Template_engine extends Smarty{
     
-    public function __construct($params) {
+    public function __construct($params = array()) {
         parent::__construct();
         
-        $path = $params['path'];
+        $CI =& get_instance();
+        
+        $CI->config->load('my_config');
+        
+        $path = $CI->config->item('path');
         
         $templates['templates'] = $path . 'application/views/templates/';
         $templates['header'] = $path . 'application/views/header/';
         $templates['content'] = $path . 'application/views/content/';
         $templates['sidebar'] = $path . 'application/views/sidebar/';
         $templates['footer'] = $path . 'application/views/footer/';
+        $templates['modals'] = $path . 'application/views/modals/';
         
         $this->setTemplateDir($templates);
         $this->setCompileDir($path . 'application/libraries/smarty/templates_c/');
