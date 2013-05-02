@@ -40,6 +40,7 @@
 
 $route['default_controller'] = "home";
 $route['administrator'] = "administrator";
+$route['journals'] = "journals";
 
 //$route['default_controller'] = "welcome";
 $route['404_override'] = '';

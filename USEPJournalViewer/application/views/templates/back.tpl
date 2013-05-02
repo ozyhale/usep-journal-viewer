@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap.css">
+        <link rel="stylesheet" href="{$site_url}application/views/css/bootstrap.css">
         
         <style>
             body {
@@ -15,10 +15,10 @@
                 padding-bottom: 40px;
             }
         </style>
-        <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap-responsive.css">
-        <link rel="stylesheet" href="{$base_url}application/views/css/main.css">
+        <link rel="stylesheet" href="{$site_url}application/views/css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="{$site_url}application/views/css/main.css">
 
-        <script src="{$base_url}application/views/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="{$site_url}application/views/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
 
@@ -42,16 +42,14 @@
             </div>
 
         </div>
-                
-
 
         {*Footer*}
         {include file=$footer}
 
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-        <script>window.jQuery || document.write('<script src="{$base_url}application/views/js/vendor/jquery-1.9.1.js"><\/script>')</script>
-        <!--<script src="{$base_url}application/views/js/vendor/jquery-1.9.1.js"></script>-->
-        <script src="{$base_url}application/views/js/vendor/bootstrap.js"></script>
-        <script src="{$base_url}application/views/js/main.js"></script>
+        <script>window.jQuery || document.write('<script src="{$site_url}application/views/js/vendor/jquery-1.9.1.js"><\/script>')</script>
+        <!--<script src="{$site_url}application/views/js/vendor/jquery-1.9.1.js"></script>-->
+        <script src="{$site_url}application/views/js/vendor/bootstrap.js"></script>
+        <script src="{$site_url}application/views/js/main.js"></script>
     </body>
 </html>

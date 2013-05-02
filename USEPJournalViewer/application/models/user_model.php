@@ -16,14 +16,12 @@ class User_model extends CI_Model {
         parent::__construct();
     }
 
-    public function get_id($username, $password) {
+    public function get_user_info($username, $password) {
 
         $query = $this->db->get_where('users', array('username' => $username, 'password' => $password));
 
         if ($query->num_rows() == 1) {
-            $row = $query->row();
-
-            return $row->id;
+            return $query->row_array();
         }else{
             return null;
         }
