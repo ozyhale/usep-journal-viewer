@@ -62,6 +62,10 @@
                     <option>November</option>
                     <option>December</option>
                 </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
                 <select>
                     <option>- Select Year -</option>
                     <option>2000</option>
