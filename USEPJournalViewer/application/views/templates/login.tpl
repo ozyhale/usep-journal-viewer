@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap.css">
         <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap-responsive.css">
         <link rel="stylesheet" href="{$base_url}application/views/css/main.css">
+        <link rel="stylesheet" href="{$base_url}application/views/imageflow/imageflow.css">
 
         <script src="{$base_url}application/views/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
@@ -62,7 +63,7 @@
         <script src="{$base_url}application/views/js/vendor/jquery-1.9.1.js"></script>
         <script src="{$base_url}application/views/js/vendor/bootstrap.js"></script>
         <script src="{$base_url}application/views/js/main.js"></script>
-
+        
     </body>
        
        {* {include file='footer.tpl'} *}
