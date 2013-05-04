@@ -15,7 +15,7 @@ require_once 'smarty/Smarty.class.php';
 
 class Template_engine extends Smarty{
     
-    public function __construct($params = array()) {
+    public function __construct() {
         parent::__construct();
         
         $CI =& get_instance();
@@ -39,6 +39,9 @@ class Template_engine extends Smarty{
         $this->caching = 0;
         
         $this->assign('alert', '');
+        $this->assign('base_url', base_url());
+        $this->assign('site_url', site_url());
+
     }
     
     public function set_alert($msg, $type = 'Warning'){

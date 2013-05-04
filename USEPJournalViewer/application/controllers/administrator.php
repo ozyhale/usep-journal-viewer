@@ -13,14 +13,12 @@ class Administrator extends CI_Controller {
     function __construct() {
         parent::__construct();
 
-        $this->config->load('my_config');
-
+        $this->config->set_item('index_page', 'index.php/');
+        
         $this->site_name = $this->config->item('site_name');
 
-        $this->load->library('template_engine');
         $this->load->library('session');
         $this->load->library('form_validation');
-        $this->load->helper('url');
         $this->load->helper('form');
 
         $this->template_engine->assign('base_url', base_url());
@@ -73,27 +71,23 @@ class Administrator extends CI_Controller {
         }
     }
 
-    private function _login_page() {
-        $this->template_engine->display('login.tpl');
-    }
-
-    private function _back_page() {
-
-        $username = $this->session->userdata('username');
-
-        $this->template_engine->assign('username', $username);
-        $this->template_engine->assign('header', 'back_header.tpl');
-        $this->template_engine->assign('sidebar', 'back_sidebar.tpl');
-        $this->template_engine->assign('content', 'back_home.tpl');
-
-        $this->template_engine->display('back.tpl');
-    }
-
     public function _output() {
         if ($this->session->userdata('username') == '') {
-            $this->_login_page();
+            $this->template_engine->display('login.tpl');
         } else {
-            $this->_back_page();
+            $firstname = $this->session->userdata('firstname');
+            $middlename = $this->session->userdata('middlename');
+            $lastname = $this->session->userdata('lastname');
+
+            $this->template_engine->assign('firstname', $firstname);
+            $this->template_engine->assign('middlename', $middlename);
+            $this->template_engine->assign('lastname', $lastname);
+            $this->template_engine->assign('header', 'back_header.tpl');
+            $this->template_engine->assign('sidebar', 'back_sidebar.tpl');
+            $this->template_engine->assign('content', 'back_home.tpl');
+            $this->template_engine->assign('active_menu_item', 'Home');
+
+            $this->template_engine->display('back.tpl');
         }
     }
 

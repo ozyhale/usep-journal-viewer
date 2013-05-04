@@ -17,45 +17,47 @@
 
     </head>
     <body>
-        
-        
+
+
         {*  {include file='header.tpl'}  *}
 
 
-        
-<div class="container">
-    
-<div class="row">
-    <div class="span6 offset3">
-        <form method="post" class="form-horizontal" action="{$site_url}administrator/login">
-            
-            <legend>Administrator Login</legend>
-             
-            {$alert}
-            
-            <div class="control-group">
-                <label class="control-label">Username: </label>
-                <div class="controls">
-                    <input type="text" placeholder="Enter Your Username" name = "username" autofocus required>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="span6 offset3">
+
+                    <form method="post" class="form-horizontal" action="{$site_url}administrator/login">
+
+                        <legend>Administrator Login</legend>
+
+                        {$alert}
+
+                        <div class="control-group">
+                            <label class="control-label">Username: </label>
+                            <div class="controls">
+                                <input type="text" placeholder="Enter Your Username" name = "username" autofocus required>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label">Password: </label>
+                            <div class="controls">
+                                <input type="password" placeholder="Enter Your Password" name = "password" required>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <div class="controls">
+                                <button class="btn btn-primary" type="submit">Go to Cpanel</button>
+                                <a class="btn" type="submit" href="{$base_url}"><i class="icon-home"></i></a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-
-            <div class="control-group">
-                <label class="control-label">Password: </label>
-                <div class="controls">
-                    <input type="password" placeholder="Enter Your Password" name = "password" required>
-                </div>
-            </div>
-
-            <div class="control-group">
-                <div class="controls">
-                    <button class="btn btn-primary" type="submit">Go to Cpanel</button>
-                </div>
-            </div>    
-        </form>
-    </div>
-</div>
-</div>
+        </div>
 
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>-->
         <!--<script>window.jQuery || document.write('<script src="{$base_url}/application/views/js/vendor/jquery-1.9.1.js"><\/script>')</script>-->
@@ -63,8 +65,8 @@
         <script src="{$base_url}application/views/js/vendor/jquery-1.9.1.js"></script>
         <script src="{$base_url}application/views/js/vendor/bootstrap.js"></script>
         <script src="{$base_url}application/views/js/main.js"></script>
-        
+
     </body>
-       
-       {* {include file='footer.tpl'} *}
+
+    {* {include file='footer.tpl'} *}
 </html>
