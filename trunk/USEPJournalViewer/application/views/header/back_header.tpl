@@ -9,13 +9,21 @@
             <a class="brand" href="#">USEP Journal Viewer</a>
             <div class="nav-collapse collapse">
                 <p class="navbar-text pull-right">
-                    Logged in as <a href="#" class="navbar-link">{$username}</a>
+                    Hi! {$firstname} {$middlename}. {$lastname}, <a href="{$site_url}administrator/logout">Logout</a>
                 </p>
                 <ul class="nav">
-                    <li><a href="{$site_url}administrator">Home</a></li>
-                    <li><a href="{$site_url}journals">Journals</a></li>
-                    <li><a href="#contact">Departments</a></li>
-                    <li><a href="#contact">Users</a></li>
+                    <li {if $active_menu_item == 'Home'}class='active'{/if}>
+                        <a href="{$site_url}administrator">Home</a>
+                    </li>
+                    <li {if $active_menu_item == 'Journals'}class='active'{/if}>
+                        <a href="{$site_url}journals">Journals</a>
+                    </li>
+                    <li {if $active_menu_item == 'Departments'}class='active'{/if}>
+                        <a href="{$site_url}departments">Departments</a>
+                    </li>
+                    <li {if $active_menu_item == 'Users'}class='active'{/if}>
+                        <a href="{$site_url}users">Users</a>
+                    </li>
                 </ul>
             </div>
         </div>

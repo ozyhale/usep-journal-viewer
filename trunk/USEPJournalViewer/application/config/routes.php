@@ -39,8 +39,8 @@
 */
 
 $route['default_controller'] = "home";
-$route['administrator'] = "administrator";
-$route['journals'] = "journals";
+$route['full/(:any)'] = "full/departments/$1";
+$route['conpendium/(:any)'] = "conpendium/departments/$1";
 
 //$route['default_controller'] = "welcome";
 $route['404_override'] = '';

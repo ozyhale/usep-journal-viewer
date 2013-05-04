@@ -8,8 +8,8 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap.css">
-        
-        <style>
+
+        <style type="text/css">
             body {
                 padding-top: 60px;
                 padding-bottom: 40px;
@@ -25,29 +25,20 @@
         {*Header*}
         {include file=$header}
 
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span8">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
                     {*Sidebar*}
                     {include file=$content}
                 </div>
-
-                <div class="span4">
-
-                    {$alert}
-
-                    {*Content*}
-                    {include file=$sidebar}
-                </div>
             </div>
 
+            {*Footer*}
+            {include file=$footer}
         </div>
 
-        {*Footer*}
-        {include file=$footer}
-
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-        <script>window.jQuery || document.write('<script src="{$base_url}application/views/js/vendor/jquery-1.9.1.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="{$base_url}application/views/js/vendor/jquery-1.9.1.js"><\/script>');</script>
         <!--<script src="{$base_url}application/views/js/vendor/jquery-1.9.1.js"></script>-->
         <script src="{$base_url}application/views/js/vendor/bootstrap.js"></script>
         <script src="{$base_url}application/views/js/main.js"></script>
