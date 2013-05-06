@@ -62,6 +62,24 @@ class Template_engine extends Smarty{
         $this->assign('alert', $alert);
         
     }
+    
+    public function set_add_user_alert($msg, $type = 'Warning') {
+
+        if ($type == 'Error') {
+            $alert_type = 'alert-error';
+        } else if ($type == 'Success') {
+            $alert_type = 'alert-success';
+        } else if ($type == 'Info') {
+            $alert_type = 'alert-info';
+        }
+
+        $msg = strip_tags($msg);
+        
+        $dismiss = "<a href='#' class='close' data-dismiss='alert'>&times;</a>";
+        $add_user_alert = "<div class='alert " . $alert_type . " fade in'>$dismiss<strong>$type!</strong> $msg</div>";
+
+        $this->assign('add_user_alert', $add_user_alert);
+    }
 }
 
 ?>
