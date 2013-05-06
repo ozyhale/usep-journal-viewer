@@ -3,7 +3,7 @@
         <li class="nav-header">Shortcuts</li>
         <li>
             <a href="#addJournal" data-toggle="modal">Add Journal</a>
-            
+
             <div id="addJournal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -19,11 +19,11 @@
                     <div class="control-group">
                         <label class="control-label">Journal Type</label>
                         <div class="controls">
-                        <select>
-                            <option>- Select Type of Journal -</option>
-                            <option>Full Length Journal</option>
-                            <option>Conpendum Journal</option>
-                        </select>
+                            <select>
+                                <option>- Select Type of Journal -</option>
+                                <option>Full Length Journal</option>
+                                <option>Conpendum Journal</option>
+                            </select>
                         </div>
                     </div>
                     <div class="control-group">
@@ -130,20 +130,8 @@
                 </div>
             </div>
         </li>
-        <li><a href="#addUser" data-toggle="modal">Add User</a>
-            <div id="addUser" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h3 id="myModalLabel">Add User</h3>
-                </div>
-                <div class="modal-body">
-                    <p>One fine body…</p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                    <button class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
+        <li><a href="#add_user" data-toggle="modal">Add User</a>
+            {include file='add_user_modal.tpl'}
         </li>
         <li class="nav-header">User Navigation</li>
         <li><a href="#editUser" data-toggle="modal">Settings</a>

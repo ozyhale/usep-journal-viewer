@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap.css">
-        
+
         <style>
             body {
                 padding-top: 60px;
@@ -51,5 +51,16 @@
         <!--<script src="{$base_url}application/views/js/vendor/jquery-1.9.1.js"></script>-->
         <script src="{$base_url}application/views/js/vendor/bootstrap.js"></script>
         <script src="{$base_url}application/views/js/main.js"></script>
+
+        {if isset($add_user_alert)}
+            {literal}
+                <script type="text/javascript">
+            $(document).ready(function() {
+                $('#add_user').modal('show');
+            });
+                </script>
+            {/literal}
+        {/if}
+
     </body>
 </html>

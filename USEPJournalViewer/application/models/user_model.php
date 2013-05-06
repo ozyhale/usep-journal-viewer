@@ -26,6 +26,18 @@ class User_model extends CI_Model {
             return null;
         }
     }
+    
+     public function add_user(){
+        
+        $this->username = $this->input->post('username');
+        $this->password = $this->input->post('password');
+        $this->firstname = $this->input->post('firstname');
+        $this->lastname = $this->input->post('lastname');
+        $this->middlename = $this->input->post('middlename');
+        $this->email = $this->input->post('email');
+        
+        $this->db->insert('users', $this);
+    }
 
 }
 
