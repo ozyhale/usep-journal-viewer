@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">USEP Journal Viewer</a>
+            <a class="brand" href="{$site_url}administrator">USEP Journal Viewer</a>
             <div class="nav-collapse collapse">
                 <p class="navbar-text pull-right">
                     Hi! {$firstname} {$middlename}. {$lastname}, <a href="{$site_url}administrator/logout">Logout</a>

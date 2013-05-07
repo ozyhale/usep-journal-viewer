@@ -1,4 +1,4 @@
-<legend>List of Department</legend>
+<legend><i class="icon-book"></i>&nbsp; List of Department</legend>
 
 <table class="table table-bordered">
     <tr>

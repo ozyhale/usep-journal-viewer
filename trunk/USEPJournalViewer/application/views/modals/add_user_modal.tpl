@@ -68,7 +68,6 @@
         </div>
 
         <div class="modal-footer">
-            <a href="#" class="btn" data-dismiss="modal">Close</a>
             <button class="btn btn-primary" type="submit"><i class="icon-thumbs-up icon-white"></i>&nbsp;Add</button>
         </div>
     </form>

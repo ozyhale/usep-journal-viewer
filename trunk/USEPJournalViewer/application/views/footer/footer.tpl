@@ -2,5 +2,7 @@
 <hr>
 
 <footer>
-    <p>© Company 2013</p>
+    <center>
+    <p>Copyright © 2013, USeP-IC. All Rights Reserved.</p>
+    <center>
 </footer>
