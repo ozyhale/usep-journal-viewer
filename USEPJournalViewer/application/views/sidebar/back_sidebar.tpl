@@ -111,7 +111,6 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
                     <button class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>&nbsp;Add</button>
                 </div>
             </div>
@@ -132,7 +131,6 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
                     <button class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>&nbsp;Add</button>
                 </div>
             </div>
@@ -178,7 +176,6 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
                     <button class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>&nbsp;Select</button>
                 </div>
             </div>
