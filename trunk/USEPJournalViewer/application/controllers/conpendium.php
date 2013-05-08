@@ -24,6 +24,10 @@ class Conpendium extends CI_Controller {
     public function departments($dept_initials) {
         
     }
+    
+    public function index(){
+        
+    }
 
     public function _output() {
         
