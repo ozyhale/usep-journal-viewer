@@ -19,7 +19,7 @@
                         <a href="{$site_url}journals">Journals</a>
                     </li>
                     <li {if $active_menu_item == 'Departments'}class='active'{/if}>
-                        <a href="{$site_url}departments">Departments</a>
+                        {*<a href="{$site_url}departments">Departments</a>*}    
                     </li>
                     <li {if $active_menu_item == 'Users'}class='active'{/if}>
                         <a href="{$site_url}users">Users</a>
