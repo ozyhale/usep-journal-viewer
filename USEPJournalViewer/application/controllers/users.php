@@ -31,7 +31,6 @@ class Users extends CI_Controller {
     public function index() {}
     
     public function delete($t_userID){
-        //var_dump($t_userID);
         $this->user_model->delete($t_userID);
     }
     
@@ -44,28 +43,19 @@ class Users extends CI_Controller {
         $this->form_validation->set_rules('lastname', 'Last Name', 'required');
         
         if ($this->form_validation->run()) {
+
             
-//            $data = array(
-//               'title' => $title,
-//               'name' => $name,
-//               'date' => $date
-//            );
-            
-           
-//            if($this->input->post('new_password') == $this->input->post('old_password')){
-//                $this->template_engine->set_add_user_alert('old and new password was not match!', 'Error');
-//            
-//                return;
-//            }
-            
-            
-            //var_dump($this->input->post('new_password') == $this->input->post('old_password'));
-            
-            
-            //$this->template_engine->set_add_user_alert('Successfully Updating accounts!', 'Success');
+            $user_pass = $this->user_model->get_userpass($this->session->userdata('id'));
+            if($user_pass['password'] == $this->input->post('old_password')){
+                $this->user_model->update($this->session->userdata('id'));
+                $this->template_engine->set_alert('Successfully Updating accounts!', 'Success');
+            }else{
+                $this->template_engine->set_alert('old password was not found in your account!', 'Error');
+            }
+           ;
         } else {
             if (validation_errors() != "") {
-                $this->template_engine->set_add_user_alert(validation_errors(), 'Error');
+                $this->template_engine->set_alert(validation_errors(), 'Error');
             }
         }
         
@@ -84,10 +74,10 @@ class Users extends CI_Controller {
             
             $this->user_model->add_user();
             
-            $this->template_engine->set_add_user_alert('Added Successfully!', 'Success');
+            $this->template_engine->set_alert('Added Successfully!', 'Success');
         } else {
             if (validation_errors() != "") {
-                $this->template_engine->set_add_user_alert(validation_errors(), 'Error');
+                $this->template_engine->set_alert(validation_errors(), 'Error');
             }
         }
     }

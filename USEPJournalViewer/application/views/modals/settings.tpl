@@ -3,13 +3,13 @@
 
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3>Add User</h3>
+            <h3>Account Settings</h3>
         </div>
 
         <div class="modal-body">
 
-            {if isset($settings_user_alert)}
-                {$settings_user_alert}
+            {if isset($add_user_alert)}
+                {$add_user_alert}
             {/if}
 
             <legend>Login Information</legend>
