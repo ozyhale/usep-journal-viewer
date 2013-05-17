@@ -44,13 +44,13 @@ class Administrator extends CI_Controller {
             $password = $this->input->post('password');
 
             $user_info = $this->user_model->get_user_info($username, $password);
-
+            
             if ($user_info != null) {
 
                 unset($user_info['password']);
 
                 $this->session->set_userdata($user_info);
-
+                //var_dump($user_info);
                 header("Location: " . site_url('administrator'));
                 exit;
             } else {
@@ -78,11 +78,13 @@ class Administrator extends CI_Controller {
             $firstname      = $this->session->userdata('firstname');
             $middlename     = $this->session->userdata('middle_initial');
             $lastname       = $this->session->userdata('lastname');
+            $email          = $this->session->userdata('email');
             $account_type   = $this->session->userdata('account_type');
             
             $this->template_engine->assign('firstname', $firstname);
             $this->template_engine->assign('middlename', $middlename);
             $this->template_engine->assign('lastname', $lastname);
+            $this->template_engine->assign('email', $email);
             $this->template_engine->assign('account_type', $account_type);
             
             $this->template_engine->assign('header', 'back_header.tpl');
