@@ -16,6 +16,25 @@
 
         <script src="{$base_url}application/views/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
+    <style>  
+        
+         #login_bg{
+                background-image: url('{$base_url}/application/views/img/login_bg.png');
+                background-repeat: no-repeat;
+                width: 600px;
+                height: 575px;  
+            }
+            
+          #form_bg{
+                background-image: url('{$base_url}/application/views/img/form_bg.png');
+                background-repeat: no-repeat;
+                height: 220;
+                width: 415px;
+                margin-top: 180px;
+                margin-left: 100px;
+            }
+        
+    </style>
     </head>
     <body>
 
@@ -24,17 +43,17 @@
 
 
 
-        <div class="container">
+        <div class="container"><center/>
 
-            <div class="row">
-                <div class="span6 offset3">
-
+   
+            <div id="login_bg"class="row">        
+                <div id="form_bg" class="span5" style="margin-left: 100x; margin-top: 130px;">
                     <form method="post" class="form-horizontal" action="{$site_url}administrator/login">
 
                         <legend>Administrator Login</legend>
-
-                        {$alert}
-
+                        
+                   {*{$alert}*}
+             
                         <div class="control-group">
                             <label class="control-label">Username: </label>
                             <div class="controls">
