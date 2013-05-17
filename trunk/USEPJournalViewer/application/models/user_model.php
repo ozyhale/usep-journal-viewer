@@ -10,8 +10,7 @@
  *
  * @author Ozy Admin
  */
-class User_model extends CI_Model {
-
+class User_model extends CI_Model {    
     public function __construct() {
         parent::__construct();
     }
@@ -27,15 +26,25 @@ class User_model extends CI_Model {
         }
     }
     
-     public function add_user(){
+    public function query_users(){
+        $query = $this->db->query("SELECT id, lastname, firstname, middle_initial, `email` from users where `account_type` = 'admin'");
         
+        return $query->result_array();
+    }
+    
+    public function delete($t_userID){
+        $this->db->delete('users', array('id' => $t_userID)); 
+    }
+    
+    public function add_user(){
+
         $this->username = $this->input->post('username');
         $this->password = $this->input->post('password');
         $this->firstname = $this->input->post('firstname');
         $this->lastname = $this->input->post('lastname');
         $this->middle_initial = $this->input->post('middle_initial');
         $this->email = $this->input->post('email');
-        
+
         $this->db->insert('users', $this);
     }
 

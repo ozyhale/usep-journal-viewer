@@ -22,7 +22,7 @@
                         {*<a href="{$site_url}departments">Departments</a>*}    
                     </li>
                     <li {if $active_menu_item == 'Users'}class='active'{/if}>
-                        <a href="{$site_url}users">Users</a>
+                        {if $account_type eq "Super Admin"}<a href="{$site_url}users">Users</a>{/if}
                     </li>
                 </ul>
             </div>

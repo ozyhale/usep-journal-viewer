@@ -110,22 +110,28 @@
     
     <thead>
         <tr>
-            <th style="padding-top: 25px;" rowspan="2"><center>Username</center></th>
-            <th style="padding-top: 25px;" rowspan="2"><center>Password</center></th>
-            <th style="max-width: 100px;"colspan="2" ><center>Action</center></th>
-        </tr>
-        <tr>
-            <th style="max-width: 50px;"><center>Edit</center></th>
+            <th style="padding-top: 25px;" rowspan="2"><center>Name</center></th>
+            <th style="padding-top: 25px;" rowspan="2"><center>Email Address</center></th>
             <th style="max-width: 50px;"><center>Delete</center></th>
         </tr>
     </thead>
     <tbody>
+        {foreach from=$name key=k item=i}
+           <tr> 
+                <td style="max-width: 200px">{$name[$k]['lastname']}, {$name[$k]['firstname']} {$name[$k]['middle_initial']}.</td>
+                <td style="max-width: 200px">{$name[$k]['email']}</td>
+                <td><center><button class="btn btn-danger" onclick="window.location.href='{$site_url}/users/delete/{$name[$k]['id']}/'"><i class="icon-remove icon-white"></button></td>
+            </tr>
+        {/foreach}    
+        
+        <!--
         <tr>
-        <td style="max-width: 200px">admin</td>
-        <td style="max-width: 200px">password</td>
-        <td><center><button class="btn btn-success"><i class="icon-pencil icon-white"></button></td>
-        <td><center><button class="btn btn-danger"><i class="icon-remove icon-white"></button></td>
-    </tr>
+            <td style="max-width: 200px">admin</td>
+            <td style="max-width: 200px">password</td>
+            <td><center><button class="btn btn-success"><i class="icon-pencil icon-white"></button></td>
+            <td><center><button class="btn btn-danger"><i class="icon-remove icon-white"></button></td>
+        </tr>
+        -->
     </tbody>
     
 </table>

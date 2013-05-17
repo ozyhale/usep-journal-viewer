@@ -14,8 +14,10 @@ class Users extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-
+        $this->load->model('user_model', '', TRUE);
+        
         $this->site_name = $this->config->item('site_name');
+        
 
         $this->load->library('session');
         $this->load->library('form_validation');
@@ -28,9 +30,14 @@ class Users extends CI_Controller {
 
     public function index() {}
     
+    public function delete($t_userID){
+        //var_dump($t_userID);
+        $this->user_model->delete($t_userID);
+    }
+    
     public function add() {
 
-        $this->load->model('user_model', '', TRUE);
+        
         
         $this->form_validation->set_rules('username', 'Username', 'required|alpha_dash|min_length[7]|is_unique[users.username]');
         $this->form_validation->set_rules('password', 'Password', 'required|min_length[7]');
@@ -56,18 +63,28 @@ class Users extends CI_Controller {
         if ($this->session->userdata('username') == '') {
             $this->template_engine->display('login.tpl');
         } else {
-            $firstname = $this->session->userdata('firstname');
-            $middlename = $this->session->userdata('middle_initial');
-            $lastname = $this->session->userdata('lastname');
+            $firstname      = $this->session->userdata('firstname');
+            $middlename     = $this->session->userdata('middle_initial');
+            $lastname       = $this->session->userdata('lastname');
+            $account_type   = $this->session->userdata('account_type');
+            $query          = $this->user_model->query_users();
 
             $this->template_engine->assign('firstname', $firstname);
             $this->template_engine->assign('middlename', $middlename);
             $this->template_engine->assign('lastname', $lastname);
+            $this->template_engine->assign('account_type', $account_type);
             $this->template_engine->assign('header', 'back_header.tpl');
             $this->template_engine->assign('sidebar', 'back_sidebar.tpl');
             $this->template_engine->assign('content', 'back_users.tpl');
             $this->template_engine->assign('active_menu_item', 'Users');
-
+            $this->template_engine->assign('name', $query);
+//            $this->template_engine->assign('email', $this->user_model->query_users());
+            //$this->user_model->
+            //$query = $this->user_model->query_users();
+//            var_dump($query[0]['email']);
+//             var_dump($query[1]['email']);
+            //print_r($query);
+            
             $this->template_engine->display('back.tpl');
         }
     }
