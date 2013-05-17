@@ -65,7 +65,15 @@
             {/literal}
         {/if}
         
-        
+        {if isset($add_user_alert)}
+            {literal}
+                <script type="text/javascript">
+            $(document).ready(function() {
+                $('#edit_user').modal('show');
+            });
+                </script>
+            {/literal}
+        {/if}
 
     </body>
 </html>
