@@ -74,31 +74,25 @@ class Journals extends CI_Controller {
             //$this->upload($_FILES['cover_img'], $this->input->post('title'));
         
         
-        $this->load->library('upload_class', $_FILES['cover_img']);
-
         
-//        if (!$this->upload_class->uploaded) {
-//            $this->_upload_error("Failed to upload the file!");
-//            return;
-//        }
+        $params['file'] = $_FILES['cover_img'];
+        $this->load->library('upload_class', $_FILES['cover_img'], 'upload_img');
+        $this->upload_img->file_overwrite         = true;
+        $this->upload_img->allowed                = array("image/jpeg", "image/png", "image/gif", "image/pjpeg");
+        $this->upload_img->file_new_name_body     = $this->input->post('title'); ;
+        $this->upload_img->process('application/tmp/cover_page/');
         
-        //$params['file'] = $_FILES['cover_img'];
-        $this->load->library('upload_class', $_FILES['cover_img']);
-        $this->upload_class->file_overwrite         = true;
-        $this->upload_class->allowed                = array("image/jpeg", "image/png", "image/gif", "image/pjpeg");
-        $this->upload_class->file_new_name_body     = $this->input->post('title'); ;
-
-        
-        $this->upload_class->clean();
+        $this->upload_img->clean();
          
         
-        //$params['file'] = $_FILES['pdf_file'];
-        $this->load->library('upload_class', $_FILES['pdf_file']);
-        $this->upload_class->file_overwrite         = true;
-        $this->upload_class->allowed                = array('application/pdf');
-        $this->upload_class->file_new_name_body     = $this->input->post('title'); 
+        $params['file'] = $_FILES['pdf_file'];
+        $this->load->library('upload_class', $_FILES['pdf_file'], 'upload_pdf_file');
+        $this->upload_pdf_file->file_overwrite         = true;
+        $this->upload_pdf_file->allowed                = array('application/pdf');
+        $this->upload_pdf_file->file_new_name_body     = $this->input->post('title'); 
+        $this->upload_pdf_file->process('application/tmp/pdf_file/');
         
-        $this->upload_class->clean();
+        $this->upload_pdf_file->clean();
             
             
             
