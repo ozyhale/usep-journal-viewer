@@ -27,6 +27,8 @@
                             </select>
                         </div>
                     </div>
+                    
+                    <!--
                     <div class="control-group">
                         <label class="control-label">Choose Department</label>
                         <div class="controls">
@@ -42,6 +44,8 @@
                             </select>
                         </div>
                     </div>
+                    -->
+                    
                     <div class="control-group">
                         <label class="control-label">Volume Number</label>
                         <div class="controls">
@@ -118,6 +122,7 @@
         
         <!--  add department -->
         
+        <!--
         <li><a href="#addDept" data-toggle="modal">Add Department</a>
             <div id="addDept" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-header">
@@ -135,6 +140,7 @@
                 </div>
             </div>
         </li>
+        -->
         
         <!-- add user -->
         

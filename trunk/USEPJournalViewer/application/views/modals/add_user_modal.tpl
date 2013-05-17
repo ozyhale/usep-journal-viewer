@@ -52,9 +52,9 @@
             </div>
 
             <div class="control-group">
-                <label class="control-label">Middle Name: </label>
+                <label class="control-label">Middle Initial: </label>
                 <div class="controls">
-                    <input type="text" name="middlename">
+                    <input type="text" name="middle_initial">
                 </div>
             </div>
 
