@@ -17,28 +17,28 @@
             <div class="control-group">
                 <label class="control-label">Username: </label>
                 <div class="controls">
-                    <input type="text" name="username">
+                    <input type="text" name="username" placeholder="Enter username...">
                 </div>
             </div>
 
             <div class="control-group">
                 <label class="control-label">Password: </label>
                 <div class="controls">
-                    <input type="password" name="password">
+                    <input type="password" name="password" placeholder="Enter password...">
                 </div>
             </div>
 
             <div class="control-group">
                 <label class="control-label">Confirm Password: </label>
                 <div class="controls">
-                    <input type="password" name="confpass">
+                    <input type="password" name="confpass" placeholder="Enter password again...">
                 </div>
             </div>
 
             <div class="control-group">
                 <label class="control-label">Email: </label>
                 <div class="controls">
-                    <input type="email" name="email">
+                    <input type="email" name="email" placeholder="Enter email address...">
                 </div>
             </div>
 
@@ -47,21 +47,21 @@
             <div class="control-group">
                 <label class="control-label">First Name: </label>
                 <div class="controls">
-                    <input type="text" name="firstname">
+                    <input type="text" name="firstname" placeholder="Enter firstname...">
                 </div>
             </div>
 
             <div class="control-group">
                 <label class="control-label">Middle Initial: </label>
                 <div class="controls">
-                    <input type="text" name="middle_initial" required pattern="[A-Z]">
+                    <input type="text" name="middle_initial" required pattern="[A-Z]" placeholder="Enter middle initial...">
                 </div>
             </div>
 
             <div class="control-group">
                 <label class="control-label">Last Name: </label>
                 <div class="controls">
-                    <input type="text" name="lastname">
+                    <input type="text" name="lastname" placeholder="Enter lastname...">
                 </div>
             </div>
 

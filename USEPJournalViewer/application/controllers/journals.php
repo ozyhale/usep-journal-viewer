@@ -15,6 +15,9 @@ class Journals extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('Journal_model', '', TRUE);
+        $this->load->library('session');
+        $this->load->library('form_validation');
+        
         $this->site_name = $this->config->item('site_name');
 
         $this->load->library('session');
@@ -25,8 +28,85 @@ class Journals extends CI_Controller {
 
     public function index() {}
     
+    private function upload($t_params, $t_title){  var_dump($t_params); 
+        $this->load->library('upload_class', $t_params);
+        $types = array("image/jpeg", "image/png", "image/gif", "image/pjpeg");
+        
+//        if (!$this->upload_class->uploaded) {
+//            $this->_upload_error("Failed to upload the file!");
+//            return;
+//        }
+        
+//        $this->upload_class->file_overwrite         = true;
+//        $this->upload_class->file_new_name_body     = $t_title; 
+//        
+//        if($t_params['type'] == "application/pdf"){
+//            $this->upload_class->process('application/tmp/pdf_file/');
+//        }else if(in_array($t_params["type"], $types)){
+//            $this->upload_class->process('application/tmp/cover_page/');
+//        }else{
+//            return false;
+//        }
+//        
+//        $this->upload_class->clean();
+
+        
+            
+    }
+    
+    
     public function delete($t_journalID){
         $this->Journal_model->delete($t_journalID);
+    }
+    
+    public function add(){
+        $this->form_validation->set_rules('title', 'Title', 'required|min_length[7]|is_unique[journals.title]');
+        $this->form_validation->set_rules('type', 'Type', 'required|min_length[7]');
+        $this->form_validation->set_rules('vol_number', 'Volume Number', 'required|');
+        $this->form_validation->set_rules('issn', 'ISSN', 'required|min_length[7]');
+        $this->form_validation->set_rules('cover_img', 'Cover Page', 'required|xss_clean');
+        $this->form_validation->set_rules('pdf_file', 'Journal File', 'required|xss_clean');
+        
+        //var_dump($_FILES['file']);
+        
+        //if ($this->form_validation->run()) {
+            //$this->upload($_FILES['pdf_file'], $this->input->post('title'));
+            //$this->upload($_FILES['cover_img'], $this->input->post('title'));
+        
+        
+        $this->load->library('upload_class', $_FILES['cover_img']);
+
+        
+//        if (!$this->upload_class->uploaded) {
+//            $this->_upload_error("Failed to upload the file!");
+//            return;
+//        }
+        
+        //$params['file'] = $_FILES['cover_img'];
+        $this->load->library('upload_class', $_FILES['cover_img']);
+        $this->upload_class->file_overwrite         = true;
+        $this->upload_class->allowed                = array("image/jpeg", "image/png", "image/gif", "image/pjpeg");
+        $this->upload_class->file_new_name_body     = $this->input->post('title'); ;
+
+        
+        $this->upload_class->clean();
+         
+        
+        //$params['file'] = $_FILES['pdf_file'];
+        $this->load->library('upload_class', $_FILES['pdf_file']);
+        $this->upload_class->file_overwrite         = true;
+        $this->upload_class->allowed                = array('application/pdf');
+        $this->upload_class->file_new_name_body     = $this->input->post('title'); 
+        
+        $this->upload_class->clean();
+            
+            
+            
+//        }else{
+//            if (validation_errors() != "") {
+//                $this->template_engine->set_alert(validation_errors(), 'Error');
+//            }
+//        }
     }
     
 
