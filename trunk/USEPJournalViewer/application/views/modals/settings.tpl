@@ -17,9 +17,16 @@
 
 
             <div class="control-group">
-                <label class="control-label">Password: </label>
+                <label class="control-label">Old Password: </label>
                 <div class="controls">
-                    <input type="password" name="password" >
+                    <input type="password" name="old_password" >
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label">New Password: </label>
+                <div class="controls">
+                    <input type="password" name="new_password" >
                 </div>
             </div>
 

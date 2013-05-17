@@ -32,6 +32,19 @@ class User_model extends CI_Model {
         return $query->result_array();
     }
     
+    public function update($t_userID){
+        $data = array(
+               'password' => $this->input->post('new_password'),
+               'firstname' => $this->input->post('firstname'),
+               'middle_initial' => $this->input->post('middle_initial'),
+               'lastname' => $this->input->post('lastname'),
+               'email' => $this->input->post('email')
+            );
+        
+        $this->db->where('id', $t_userID);
+        $this->db->update('users', $data); 
+    }
+    
     public function delete($t_userID){
         $this->db->delete('users', array('id' => $t_userID)); 
     }
