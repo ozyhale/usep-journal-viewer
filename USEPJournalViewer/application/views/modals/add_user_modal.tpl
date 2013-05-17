@@ -54,7 +54,7 @@
             <div class="control-group">
                 <label class="control-label">Middle Initial: </label>
                 <div class="controls">
-                    <input type="text" name="middle_initial">
+                    <input type="text" name="middle_initial" required pattern="[A-Z]">
                 </div>
             </div>
 

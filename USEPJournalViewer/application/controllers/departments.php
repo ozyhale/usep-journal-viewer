@@ -32,7 +32,7 @@ class Departments extends CI_Controller {
             $this->template_engine->display('login.tpl');
         } else {
             $firstname = $this->session->userdata('firstname');
-            $middlename = $this->session->userdata('middlename');
+            $middlename = $this->session->userdata('middle_initial');
             $lastname = $this->session->userdata('lastname');
 
             $this->template_engine->assign('firstname', $firstname);
