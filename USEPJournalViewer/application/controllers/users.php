@@ -35,10 +35,43 @@ class Users extends CI_Controller {
         $this->user_model->delete($t_userID);
     }
     
-    public function add() {
-
+    public function settings(){ 
+        $this->form_validation->set_rules('old_password', 'Old Password', 'min_length[7]');
+        $this->form_validation->set_rules('new_password', 'New Password', 'min_length[7]');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('firstname', 'First Name', 'required');
+        $this->form_validation->set_rules('middle_initial', 'Middle Name', 'required');
+        $this->form_validation->set_rules('lastname', 'Last Name', 'required');
         
+        if ($this->form_validation->run()) {
+            
+//            $data = array(
+//               'title' => $title,
+//               'name' => $name,
+//               'date' => $date
+//            );
+            
+           
+//            if($this->input->post('new_password') == $this->input->post('old_password')){
+//                $this->template_engine->set_add_user_alert('old and new password was not match!', 'Error');
+//            
+//                return;
+//            }
+            
+            
+            //var_dump($this->input->post('new_password') == $this->input->post('old_password'));
+            
+            
+            //$this->template_engine->set_add_user_alert('Successfully Updating accounts!', 'Success');
+        } else {
+            if (validation_errors() != "") {
+                $this->template_engine->set_add_user_alert(validation_errors(), 'Error');
+            }
+        }
         
+    }
+    
+    public function add() {   
         $this->form_validation->set_rules('username', 'Username', 'required|alpha_dash|min_length[7]|is_unique[users.username]');
         $this->form_validation->set_rules('password', 'Password', 'required|min_length[7]');
         $this->form_validation->set_rules('confpass', 'Confirm Password', 'required|min_length[7]|matches[password]');
