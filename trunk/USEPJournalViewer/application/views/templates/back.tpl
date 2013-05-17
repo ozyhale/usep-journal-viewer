@@ -29,15 +29,16 @@
         <div class="container-fluid">
             <div class="row-fluid">
                 <div class="span8">
-                    {*Sidebar*}
+                    {$alert}
+                    {*Content*}
                     {include file=$content}
                 </div>
 
                 <div class="span4">
 
-                    {$alert}
+                    
 
-                    {*Content*}
+                    {*Sidebar*}
                     {include file=$sidebar}
                 </div>
             </div>
@@ -50,6 +51,7 @@
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
         <script>window.jQuery || document.write('<script src="{$base_url}application/views/js/vendor/jquery-1.9.1.js"><\/script>')</script>
         <!--<script src="{$base_url}application/views/js/vendor/jquery-1.9.1.js"></script>-->
+        <script src="{$base_url}application/views/js/vendor/bootbox.js"></script>
         <script src="{$base_url}application/views/js/vendor/bootstrap.js"></script>
         <script src="{$base_url}application/views/dataTables/jquery.dataTables.js"></script>
         <script src="{$base_url}application/views/dataTables/DT_bootstrap.js"></script>  

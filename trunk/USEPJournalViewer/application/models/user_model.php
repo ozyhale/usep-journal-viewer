@@ -32,17 +32,28 @@ class User_model extends CI_Model {
         return $query->result_array();
     }
     
+    public function get_userpass($t_userID){
+        $query = $this->db->get_where('users', array('id' => $t_userID));
+        return $query->row_array();
+    }
+    
     public function update($t_userID){
-        $data = array(
-               'password' => $this->input->post('new_password'),
-               'firstname' => $this->input->post('firstname'),
-               'middle_initial' => $this->input->post('middle_initial'),
-               'lastname' => $this->input->post('lastname'),
-               'email' => $this->input->post('email')
-            );
+        $data = $this->input->post('new_password') != "" ?
+                array(  'password' => $this->input->post('new_password'),
+                        'firstname' => $this->input->post('firstname'),
+                        'middle_initial' => $this->input->post('middle_initial'),
+                        'lastname' => $this->input->post('lastname'),
+                        'email' => $this->input->post('email')
+                ) :
+                array('firstname' => $this->input->post('firstname'),
+                        'middle_initial' => $this->input->post('middle_initial'),
+                        'lastname' => $this->input->post('lastname'),
+                        'email' => $this->input->post('email')
+                );
         
         $this->db->where('id', $t_userID);
         $this->db->update('users', $data); 
+        $this->session->set_userdata($data);
     }
     
     public function delete($t_userID){

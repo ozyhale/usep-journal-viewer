@@ -14,7 +14,7 @@ class Journals extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-
+        $this->load->model('Journal_model', '', TRUE);
         $this->site_name = $this->config->item('site_name');
 
         $this->load->library('session');
@@ -24,6 +24,11 @@ class Journals extends CI_Controller {
     }
 
     public function index() {}
+    
+    public function delete($t_journalID){
+        $this->Journal_model->delete($t_journalID);
+    }
+    
 
     public function _output() {
         if ($this->session->userdata('username') == '') {
@@ -34,7 +39,8 @@ class Journals extends CI_Controller {
             $lastname = $this->session->userdata('lastname');
             $email          = $this->session->userdata('email');
             $account_type   = $this->session->userdata('account_type');
-
+            $query          = $this->Journal_model->query_journals();
+            
             $this->template_engine->assign('firstname', $firstname);
             $this->template_engine->assign('middlename', $middlename);
             $this->template_engine->assign('lastname', $lastname);
@@ -44,6 +50,8 @@ class Journals extends CI_Controller {
             $this->template_engine->assign('sidebar', 'back_sidebar.tpl');
             $this->template_engine->assign('content', 'back_journals.tpl');
             $this->template_engine->assign('active_menu_item', 'Journals');
+            $this->template_engine->assign('journals', $query);
+            
             
             
 
