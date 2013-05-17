@@ -22,7 +22,8 @@
        <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap-responsive.css">
         <link rel="stylesheet" href="{$base_url}application/views/css/main.css">
         <link rel="stylesheet" href="{$base_url}application/views/content/imageflow.packed.css" type="text/css" />
-
+        <link rel="stylesheet" href="{$base_url}application/views/dataTables/DT_bootstrap.css">
+        
        <script src="{$base_url}application/views/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script type="text/javascript" src="{$base_url}application/views/content/imageflow.packed.js"></script>
     </head>
@@ -46,5 +47,7 @@
         <script>window.jQuery || document.write('<script src="{$base_url}application/views/js/vendor/jquery-1.9.1.js"><\/script>');</script>
         <script src="{$base_url}application/views/js/vendor/bootstrap.js"></script>
         <script src="{$base_url}application/views/js/main.js"></script>
+        <script src="{$base_url}application/views/dataTables/DT_bootstrap.js"></script>
+        <script src="{$base_url}application/views/dataTables/jquery.dataTables.js"></script>
     </body>
 </html>

@@ -37,7 +37,7 @@ class Users extends CI_Controller {
         $this->form_validation->set_rules('confpass', 'Confirm Password', 'required|min_length[7]|matches[password]');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[users.email]');
         $this->form_validation->set_rules('firstname', 'First Name', 'required');
-        $this->form_validation->set_rules('middlename', 'Middle Name', 'required');
+        $this->form_validation->set_rules('middle_initial', 'Middle Name', 'required');
         $this->form_validation->set_rules('lastname', 'Last Name', 'required');
 
         if ($this->form_validation->run()) {
@@ -57,7 +57,7 @@ class Users extends CI_Controller {
             $this->template_engine->display('login.tpl');
         } else {
             $firstname = $this->session->userdata('firstname');
-            $middlename = $this->session->userdata('middlename');
+            $middlename = $this->session->userdata('middle_initial');
             $lastname = $this->session->userdata('lastname');
 
             $this->template_engine->assign('firstname', $firstname);

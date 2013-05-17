@@ -33,7 +33,7 @@ class User_model extends CI_Model {
         $this->password = $this->input->post('password');
         $this->firstname = $this->input->post('firstname');
         $this->lastname = $this->input->post('lastname');
-        $this->middlename = $this->input->post('middlename');
+        $this->middle_initial = $this->input->post('middle_initial');
         $this->email = $this->input->post('email');
         
         $this->db->insert('users', $this);
