@@ -5,6 +5,12 @@
             <h3 id="myModalLabel">Add Journal</h3>
         </div>
 
+        {*if isset($perform_progress)}
+            <div class="progress progress-striped active" style="margin-left: 50px; margin-right: 50px;">
+                <div class="bar" style="width: 100%;"> 100%</div>
+            </div>
+        {/if*}    
+
         <div class="modal-body">
             <legend>Journal Information</legend>
 
@@ -18,8 +24,8 @@
                 <label class="control-label">Journal Type:</label>
                 <div class="controls">
                     <select name="type">
-                        <option>Full Length Journal</option>
-                        <option>Conpendum Journal</option>
+                        <option>Full Length</option>
+                        <option>Conpendum</option>
                     </select>
                 </div>
             </div>
@@ -47,7 +53,7 @@
                     </span>
                 </div>
             </div>
-            
+
             <div class="control-group">
                 <label class="control-label">Journal File: </label>
                 <div class="controls">
@@ -57,27 +63,27 @@
                 </div>
             </div>
 
-                <!--
-                <div class="control-group">
-                    <label class="control-label">Cover Page</label>
-                    <div class="controls">
-                        <input type="text" placeholder="Upload Cover Page...">
-                        <button type="submit" class="btn"><i class="icon-plus"></i>&nbsp;Choose Photo</button>
-                    </div>
+            <!--
+            <div class="control-group">
+                <label class="control-label">Cover Page</label>
+                <div class="controls">
+                    <input type="text" placeholder="Upload Cover Page...">
+                    <button type="submit" class="btn"><i class="icon-plus"></i>&nbsp;Choose Photo</button>
                 </div>
-                <div class="control-group">
-                    <label class="control-label">File</label>
-                    <div class="controls">
-                        <input type="text" placeholder="Choose File...">
-                        <button type="submit" class="btn"><i class="icon-plus"></i>&nbsp;Choose File</button>
-                    </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">File</label>
+                <div class="controls">
+                    <input type="text" placeholder="Choose File...">
+                    <button type="submit" class="btn"><i class="icon-plus"></i>&nbsp;Choose File</button>
                 </div>
-                -->
+            </div>
+            -->
 
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>&nbsp;Add</button>
-            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>&nbsp;Add</button>
+        </div>
 
     </form>
 
