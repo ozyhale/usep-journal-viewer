@@ -221,3 +221,9 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+div:hover#hover_link{
+    color: #0088cc;
+    text-decoration: underline;
+    cursor: pointer;
+}

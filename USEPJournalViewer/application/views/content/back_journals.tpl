@@ -1,6 +1,6 @@
 <legend><i class="icon-book"></i>&nbsp; List of Journals</legend>
 
-<table class="table table-bordered table-hover data-table">
+<table class="table table-bordered data-table">
     <thead>
         <tr>
             <th style="max-width: 50px; padding-top: 25px;" ><center>Title</center></th>
@@ -16,11 +16,11 @@
     <tbody>
         {foreach from=$journals key=k item=i}
            <tr> 
-                <td style="max-width: 50px">{$journals[$k]['Title']}</td>
-                <td style="max-width: 50px">{$journals[$k]['type']}</td>
-                <td style="max-width: 50px">{$journals[$k]['volume']}</td>
-                <td style="max-width: 50px">{$journals[$k]['ISSN']}</td>
-                <td style="max-width: 50px">{$journals[$k]['date_released']}</td>
+               <td style="max-width: 50px"><div id="hover_link" onclick="window.location.href='{$base_url}{$journals[$k]['journal_file']}'">{$journals[$k]['Title']}</div></td>
+                <td style="max-width: 50px"><div id="hover_link" onclick="window.location.href='{$base_url}{$journals[$k]['journal_file']}'">{$journals[$k]['type']}</div></td>
+                <td style="max-width: 50px"><div id="hover_link" onclick="window.location.href='{$base_url}{$journals[$k]['journal_file']}'">{$journals[$k]['volume']}</div></td>
+                <td style="max-width: 50px"><div id="hover_link" onclick="window.location.href='{$base_url}{$journals[$k]['journal_file']}'">{$journals[$k]['ISSN']}</div></td>
+                <td style="max-width: 50px"><div id="hover_link" onclick="window.location.href='{$base_url}{$journals[$k]['journal_file']}'">{$journals[$k]['date_released']}</div></td>
                 <td>
                     <center>
                         <button class="btn btn-success"><i class="icon-pencil icon-white"></i></button>
