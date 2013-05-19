@@ -51,6 +51,11 @@
         {if isset($pre_editJournal)}
             {include file='edit_journal_modal.tpl'}  
         {/if}
+        
+        {if isset($pre_changepass)}
+            {include file='change_password.tpl'}  
+        {/if}
+        
           
             
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
@@ -92,6 +97,15 @@
             {/literal}
         {/if}
         
+        {if isset($pre_changepass)}
+            {literal}
+                <script type="text/javascript">
+            $(document).ready(function() {
+                $('#change_pass').modal('show');
+            });
+                </script>
+            {/literal}
+        {/if}
         
         
     </body>
