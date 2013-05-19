@@ -17,13 +17,13 @@
             <div class="control-group">
                 <label class="control-label">Title:</label>
                 <div class="controls">
-                    <input type="text" name="title" placeholder="Journal Name...">
+                    <input type="text" name="title" placeholder="Journal Name..." required>
                 </div>
             </div>
             <div class="control-group">
                 <label class="control-label">Journal Type:</label>
                 <div class="controls">
-                    <select name="type">
+                    <select name="type" required>
                         <option>Full Length</option>
                         <option>Conpendum</option>
                     </select>
@@ -33,13 +33,13 @@
             <div class="control-group">
                 <label class="control-label">Volume Number:</label>
                 <div class="controls">
-                    <input type="text" name="vol_number" placeholder="Enter Volume Number...">
+                    <input type="text" name="vol_number" placeholder="Enter Volume Number..." required>
                 </div>
             </div>
             <div class="control-group">
                 <label class="control-label">ISSN:</label>
                 <div class="controls">
-                    <input type="text" name="issn" placeholder="Enter ISSN...">
+                    <input type="text" name="issn" placeholder="Enter ISSN..." required>
                 </div>
             </div>
 
@@ -51,15 +51,18 @@
                     <span class="btn-file">
                         <input type="file" name="cover_img" required/>
                     </span>
-                </div>
+                    <p class="text-warning"><small>upload image file only..</small></p>
+                </div>    
             </div>
-
+                
+            
             <div class="control-group">
                 <label class="control-label">Journal File: </label>
                 <div class="controls">
                     <span class="btn-file">
                         <input type="file" name="pdf_file" required/>
                     </span>
+                    <p class="text-warning"><small>upload pdf file only..</small></p>
                 </div>
             </div>
 
