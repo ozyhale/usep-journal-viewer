@@ -27,7 +27,7 @@ class User_model extends CI_Model {
     }
     
     public function query_users(){
-        $query = $this->db->query("SELECT id, lastname, firstname, middle_initial, `email` from users where `account_type` = 'admin'");
+        $query = $this->db->query("SELECT id, username, lastname, firstname, middle_initial, `email` from users where `account_type` = 'admin'");
         
         return $query->result_array();
     }
@@ -54,6 +54,10 @@ class User_model extends CI_Model {
         $this->db->where('id', $t_userID);
         $this->db->update('users', $data); 
         $this->session->set_userdata($data);
+    }
+    
+    public function change_pass($t_uname, $newpass){
+        $this->db->query("UPDATE  `usepjournalviewer`.`users` SET  `password` =  '$newpass' WHERE  `users`.`username` = '$t_uname'");
     }
     
     public function delete($t_userID){

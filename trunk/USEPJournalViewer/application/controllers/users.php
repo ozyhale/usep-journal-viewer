@@ -34,6 +34,18 @@ class Users extends CI_Controller {
         $this->user_model->delete($t_userID);
     }
     
+    public function change_pass($t_username){
+        $this->template_engine->assign('change_pass', 'change_pass value');
+        if(isset($_POST['change_pass'])){
+            $this->user_model->change_pass($t_username, $this->input->post('password'));
+            
+            $this->template_engine->set_alert('Successfully Change the accounts password!', 'Success');
+        }else{
+            $this->template_engine->assign('pre_changepass', 'pre_changepass value');
+            $this->template_engine->assign('uname', $t_username);
+        }
+    }
+    
     public function settings(){ 
         $this->form_validation->set_rules('old_password', 'Old Password', 'min_length[7]');
         $this->form_validation->set_rules('new_password', 'New Password', 'min_length[7]');
