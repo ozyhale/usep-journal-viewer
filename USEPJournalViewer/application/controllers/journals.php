@@ -40,21 +40,22 @@ class Journals extends CI_Controller {
             $this->form_validation->set_rules('type', 'Type', 'required|min_length[4]');
             $this->form_validation->set_rules('vol_number', 'Volume Number', 'required');
             $this->form_validation->set_rules('issn', 'ISSN', 'required|min_length[4]');
+            //var_dump($_FILES['pdf_file']);
             
             if ($this->form_validation->run()) {
                 $pdffile_path       = "";
                 $coverpage_path     = "";
-                if(isset($_FILES['pdf_file'])){
-                    if (file_exists($query_journal[0]['journal_file'])) {
-                        unlink($query_journal[0]['journal_file']);
-                    }
-                    
-                    
-                    $pdffile_path = 'application/tmp/pdf_file/' .$this->input->post('title') . "_" .$this->input->post('vol_number') .".pdf"; 
+                do{
+                    $name = rand(1000000, 9999999) . rand(1000000, 9999999);
+                }while(file_exists($name));
+                
+                
+                if($_FILES['pdf_file']['name'] != ""){
+                    $pdffile_path = 'application/tmp/pdf_file/' .$name .".pdf"; 
                     $this->load->library('upload_class', $_FILES['pdf_file'], 'upload_pdf_file');
                     $this->upload_pdf_file->file_overwrite          = true;
                     $this->upload_pdf_file->allowed                 = array('application/pdf');
-                    $this->upload_pdf_file->file_new_name_body      = $this->input->post('title') . "_" .$this->input->post('vol_number'); 
+                    $this->upload_pdf_file->file_new_name_body      = $name; 
                     $this->upload_pdf_file->process('application/tmp/pdf_file/');
 
                     if(!$this->upload_pdf_file->processed){
@@ -62,22 +63,20 @@ class Journals extends CI_Controller {
                         return;
                     }
                     
-                    
+                    if(file_exists($query_journal[0]['journal_file'])){
+                        unlink($query_journal[0]['journal_file']);
+                    }
 
                     $this->upload_pdf_file->clean();
                 }
                 
-                if(isset($_FILES['cover_img'])){
-                    if (file_exists($PATH .$query_journal[0]['cover_page'])) {
-                        unlink($PATH . $query_journal[0]['cover_page']);
-                    }
-                    
-                    $coverpage_path = 'application/tmp/cover_page/' .$this->input->post('title') . "_" .$this->input->post('vol_number'); 
+                if($_FILES['cover_img']['name'] != ""){ 
+                    $coverpage_path = 'application/tmp/cover_page/' .$name ."png"; 
                     $this->load->library('upload_class', $_FILES['cover_img'], 'upload_img');
                     $this->upload_img->file_overwrite               = true;
-                    $this->upload_img->image_convert                = 'jpeg';
+                    $this->upload_img->image_convert                = 'png';
                     $this->upload_img->allowed                      = array("image/jpeg", "image/png", "image/gif", "image/pjpeg");
-                    $this->upload_img->file_new_name_body           = $this->input->post('title') . "_" .$this->input->post('vol_number'); 
+                    $this->upload_img->file_new_name_body           = $name; 
                     $this->upload_img->process('application/tmp/cover_page/');
 
 
@@ -85,6 +84,11 @@ class Journals extends CI_Controller {
                         $this->template_engine->set_alert($this->upload_img->error ." image!..", 'Error');
                         return;
                     }
+                    
+                    if(file_exists($query_journal[0]['cover_page'])){
+                        unlink($query_journal[0]['cover_page']);
+                    }
+                    
                     $this->upload_img->clean();
                 }
                 
@@ -108,18 +112,15 @@ class Journals extends CI_Controller {
     
     public function delete($t_journalID){
         $query_journal  = $this->Journal_model->query_journals_info($t_journalID);  
-        //$this->Journal_model->delete($t_journalID);
+        $this->Journal_model->delete($t_journalID);
         
-        var_dump(file_exists($query_journal[0]['cover_page']));
-        var_dump(file_exists($query_journal[0]['journal_file']));
+        if(file_exists($query_journal[0]['cover_page'])){
+            unlink($query_journal[0]['cover_page']);
+        }
         
-//        if(file_exists($query_journal[0]['cover_page'])){
-//            unlink($query_journal[0]['cover_page']);
-//        }
-//        
-//        if(file_exists($query_journal[0]['journal_file'])){
-//            unlink($query_journal[0]['journal_file']);
-//        }
+        if(file_exists($query_journal[0]['journal_file'])){
+            unlink($query_journal[0]['journal_file']);
+        }
     }
     
     public function add(){
@@ -152,10 +153,10 @@ class Journals extends CI_Controller {
             $this->upload_pdf_file->clean();
         
         
-            $coverpage_path = 'application/tmp/cover_page/' .$name .".jpeg"; 
+            $coverpage_path = 'application/tmp/cover_page/' .$name .".png"; 
             $this->load->library('upload_class', $_FILES['cover_img'], 'upload_img');
             $this->upload_img->file_overwrite               = true;
-            $this->upload_img->image_convert                = 'jpeg';
+            $this->upload_img->image_convert                = 'png';
             $this->upload_img->allowed                      = array("image/jpeg", "image/png", "image/gif", "image/pjpeg");
             $this->upload_img->file_new_name_body           = $name; 
             $this->upload_img->process('application/tmp/cover_page/');
