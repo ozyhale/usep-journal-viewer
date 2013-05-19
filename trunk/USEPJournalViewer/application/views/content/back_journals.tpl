@@ -23,7 +23,7 @@
                 <td style="max-width: 50px"><div id="hover_link" onclick="window.location.href='{$base_url}{$journals[$k]['journal_file']}'">{$journals[$k]['date_released']}</div></td>
                 <td>
                     <center>
-                        <button class="btn btn-success"><i class="icon-pencil icon-white"></i></button>
+                        <button class="btn btn-success" onclick="window.location.href='{$site_url}journals/edit/{$journals[$k]['id']}'"><i class="icon-pencil icon-white"></i></button>
                         <button class="btn btn-danger" onclick="onclick_delete_journals('{$journals[$k]['id']}','{$journals[$k]['Title']}')" ><i class="icon-remove icon-white"></i></button>
                     </center>
                 </td>
