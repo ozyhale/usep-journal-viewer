@@ -8,7 +8,7 @@
             <th style="max-width: 50px; padding-top: 25px;" ><center>Volume</center></th>
             <th style="max-width: 50px; padding-top: 25px;" ><center>ISSN</center></th>
             <th style="max-width: 50px; padding-top: 25px;" ><center>Date Released</center></th>
-            <th><center>Action</center></th>
+            <th style="max-width: 50px;"><center>Action</center></th>
         </tr>
 
     </thead>

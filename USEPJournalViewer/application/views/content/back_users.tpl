@@ -5,7 +5,7 @@
         <tr>
             <th style="padding-top: 25px;"><center>Name</center></th>
             <th style="padding-top: 25px;"><center>Email Address</center></th>
-            <th style="padding-top: 25px;"><center>Action</center></th>
+            <th style="max-width: 80px;"><center>Action</center></th>
         </tr>
     </thead>
     <tbody>
