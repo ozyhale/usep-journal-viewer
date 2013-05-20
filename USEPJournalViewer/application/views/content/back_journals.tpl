@@ -16,11 +16,11 @@
     <tbody>
         {foreach from=$journals key=k item=i}
            <tr> 
-               <td style="max-width: 50px"><div id="hover_link" onclick="window.location.href='{$base_url}{$journals[$k]['journal_file']}'">{$journals[$k]['Title']}</div></td>
-                <td style="max-width: 50px"><div id="hover_link" onclick="window.location.href='{$base_url}{$journals[$k]['journal_file']}'">{$journals[$k]['type']}</div></td>
-                <td style="max-width: 50px"><div id="hover_link" onclick="window.location.href='{$base_url}{$journals[$k]['journal_file']}'">{$journals[$k]['volume']}</div></td>
-                <td style="max-width: 50px"><div id="hover_link" onclick="window.location.href='{$base_url}{$journals[$k]['journal_file']}'">{$journals[$k]['ISSN']}</div></td>
-                <td style="max-width: 50px"><div id="hover_link" onclick="window.location.href='{$base_url}{$journals[$k]['journal_file']}'">{$journals[$k]['date_released']}</div></td>
+               <td style="max-width: 50px"><a href="{$base_url}{$journals[$k]['journal_file']}" target="_blank" style="cursor: pointer">{$journals[$k]['Title']}</a></td>
+                <td style="max-width: 50px">{$journals[$k]['type']}</td>
+                <td style="max-width: 50px">{$journals[$k]['volume']}</td>
+                <td style="max-width: 50px">{$journals[$k]['ISSN']}</td>
+                <td style="max-width: 50px">{$journals[$k]['date_released']}</td>
                 <td>
                     <center>
                         <button class="btn btn-success" onclick="window.location.href='{$site_url}journals/edit/{$journals[$k]['id']}'"><i class="icon-pencil icon-white"></i></button>
