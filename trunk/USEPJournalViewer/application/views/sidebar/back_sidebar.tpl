@@ -35,10 +35,12 @@
         -->
 
         <!-- add user -->
-
-        <li><a href="#add_user" data-toggle="modal">Add User</a>
-            {include file='add_user_modal.tpl'}
-        </li>
+        {if $account_type eq "Super Admin"}
+            <li><a href="#add_user" data-toggle="modal">Add User</a>
+                {include file='add_user_modal.tpl'}
+            </li>
+        {/if}
+        
         <li class="nav-header">User Navigation</li>
 
         <!-- edit user -->
