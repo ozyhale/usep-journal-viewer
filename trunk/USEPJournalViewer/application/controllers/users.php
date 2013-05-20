@@ -58,7 +58,7 @@ class Users extends CI_Controller {
 
             
             $user_pass = $this->user_model->get_userpass($this->session->userdata('id'));
-            if($user_pass['password'] == $this->input->post('old_password')){
+            if($user_pass['password'] == md5($this->input->post('old_password'))){
                 $this->user_model->update($this->session->userdata('id'));
                 $this->template_engine->set_alert('Successfully Updating accounts!', 'Success');
             }else{
