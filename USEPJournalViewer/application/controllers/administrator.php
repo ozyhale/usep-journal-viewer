@@ -41,7 +41,7 @@ class Administrator extends CI_Controller {
             $this->load->model('user_model', '', true);
 
             $username = $this->input->post('username');
-            $password = $this->input->post('password');
+            $password = md5($this->input->post('password'));
 
             $user_info = $this->user_model->get_user_info($username, $password);
             

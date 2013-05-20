@@ -39,7 +39,7 @@ class User_model extends CI_Model {
     
     public function update($t_userID){
         $data = $this->input->post('new_password') != "" ?
-                array(  'password' => $this->input->post('new_password'),
+                array(  'password' => md5($this->input->post('new_password')),
                         'firstname' => $this->input->post('firstname'),
                         'middle_initial' => $this->input->post('middle_initial'),
                         'lastname' => $this->input->post('lastname'),
@@ -57,7 +57,7 @@ class User_model extends CI_Model {
     }
     
     public function change_pass($t_uname, $newpass){
-        $this->db->query("UPDATE  `usepjournalviewer`.`users` SET  `password` =  '$newpass' WHERE  `users`.`username` = '$t_uname'");
+        $this->db->query("UPDATE  `usepjournalviewer`.`users` SET  `password` =  md5('$newpass') WHERE  `users`.`username` = '$t_uname'");
     }
     
     public function delete($t_userID){
@@ -67,7 +67,7 @@ class User_model extends CI_Model {
     public function add_user(){
 
         $this->username = $this->input->post('username');
-        $this->password = $this->input->post('password');
+        $this->password = md5($this->input->post('password'));
         $this->firstname = $this->input->post('firstname');
         $this->lastname = $this->input->post('lastname');
         $this->middle_initial = $this->input->post('middle_initial');
