@@ -30,7 +30,7 @@ class Journals extends CI_Controller {
     
     
     public function edit($t_journalID){
-        $query_journal  = $this->Journal_model->query_journals_info($t_journalID);  
+        $query_journal  = $this->Journal_model->query_journals_info($t_journalID, $this->session->userdata('dept_id'));  
         //var_dump(file_exists($query_journal[0]['journal_file']));
         //print_r($query_journal[0]['journal_file']);
         
@@ -168,7 +168,7 @@ class Journals extends CI_Controller {
             }
             $this->upload_img->clean();
             
-            $this->Journal_model->insert($coverpage_path, $pdffile_path);
+            $this->Journal_model->insert($coverpage_path, $pdffile_path, $this->session->userdata('dept_id'));
             $this->template_engine->set_alert('Successfully Adding a journal!', 'Success');
             
         }else{
@@ -188,7 +188,7 @@ class Journals extends CI_Controller {
             $lastname = $this->session->userdata('lastname');
             $email          = $this->session->userdata('email');
             $account_type   = $this->session->userdata('account_type');
-            $query          = $this->Journal_model->query_journals();
+            $query          = $this->Journal_model->query_journals($this->session->userdata('dept_id'));
             
             $this->template_engine->assign('firstname', $firstname);
             $this->template_engine->assign('middlename', $middlename);
