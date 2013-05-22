@@ -34,6 +34,7 @@ class Journal_model extends CI_Model{
     
     public function insert($t_coverpage_path, $t_pdffile_path, $t_deptID){
         $data = array(
+                'dept_id' => $t_deptID,
                 'Title' => $this->input->post('title') ,
                 'type' => $this->input->post('type') ,
                 'volume' => $this->input->post('vol_number'),
