@@ -200,6 +200,7 @@ class Journals extends CI_Controller {
             $this->template_engine->assign('content', 'back_journals.tpl');
             $this->template_engine->assign('active_menu_item', 'Journals');
             $this->template_engine->assign('journals', $query);
+            $this->template_engine->assign('dept_name', $this->getDeptname($this->session->userdata('dept_id')));
             
             
             
@@ -208,6 +209,20 @@ class Journals extends CI_Controller {
         }
     }
 
+    
+    public function getDeptname($t_deptID){
+        $listodDept = array(
+            '1' => 'Institute of Computing',
+            '2' => 'College of Arts and Sciences',
+            '3' => 'College of Governance Business and Economics',
+            '4' => 'School of Applied Economics',
+            '5' => 'College of Engineering',
+            '6' => 'College of Technology',
+            '7' => 'College of Education'
+        );
+        
+        return $listodDept[$t_deptID];
+    }
 }
 
 ?>

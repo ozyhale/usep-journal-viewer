@@ -16,7 +16,7 @@
                 <td>
                     <center>
                         <button class="btn btn-success" onclick="window.location.href='{$site_url}users/change_pass/{$name[$k]['username']}'"><i class="icon-wrench icon-white"></i></button>
-                        <button class="btn btn-danger" onclick="onclick_delete_users('{$name[$k]['id']}','{$name[$k]['lastname']}','{$name[$k]['firstname']}','{$name[$k]['middle_initial']}')"><i class="icon-remove icon-white"></button>
+                        <button class="btn btn-danger" onclick="onclick_delete_users('{$name[$k]['id']}','{$name[$k]['lastname']}','{$name[$k]['firstname']}','{$name[$k]['middle_initial']}')"><i class="icon-remove icon-white"></i></button>
                     </center>
                 </td>
             </tr>

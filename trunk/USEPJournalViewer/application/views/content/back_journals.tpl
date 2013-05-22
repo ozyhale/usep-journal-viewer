@@ -1,4 +1,4 @@
-<legend><i class="icon-book"></i>&nbsp; List of Journals</legend>
+<legend><i class="icon-book"></i>&nbsp; List of Journals in {$dept_name}</legend>
 
 <table class="table table-bordered data-table">
     <thead>
