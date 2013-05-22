@@ -22,8 +22,8 @@ class Journal_model extends CI_Model{
         return $query->result_array();
     }
     
-    public function query_journals_info($key){
-        $query = $this->db->query("select * from journals where id = '$key'");
+    public function query_journals_info($key, $t_deptID){
+        $query = $this->db->query("select * from journals where id = '$key' and dept_id = '$t_deptID'");
         
         return $query->result_array();
     }
@@ -32,7 +32,7 @@ class Journal_model extends CI_Model{
         $this->db->delete('journals', array('id' => $t_journalID)); 
     }
     
-    public function insert($t_coverpage_path, $t_pdffile_path){
+    public function insert($t_coverpage_path, $t_pdffile_path, $t_deptID){
         $data = array(
                 'Title' => $this->input->post('title') ,
                 'type' => $this->input->post('type') ,
