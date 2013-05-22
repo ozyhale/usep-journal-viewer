@@ -19,7 +19,7 @@ class Journals extends CI_Controller {
         $this->load->library('form_validation');
         
         $this->site_name = $this->config->item('site_name');
-        //var_dump(base_url());
+        //var_dump($this->session->userdata('dept_id'));
         $this->load->library('session');
         
         $this->template_engine->assign('title', 'Journals - ' . $this->site_name);
