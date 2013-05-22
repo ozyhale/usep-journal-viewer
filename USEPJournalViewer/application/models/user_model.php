@@ -72,6 +72,7 @@ class User_model extends CI_Model {
         $this->lastname = $this->input->post('lastname');
         $this->middle_initial = $this->input->post('middle_initial');
         $this->email = $this->input->post('email');
+        $this->dept_id = $this->input->post('dept_assigned');
 
         $this->db->insert('users', $this);
     }

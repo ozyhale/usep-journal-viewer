@@ -65,6 +65,23 @@
                 </div>
             </div>
 
+            <legend>Assigned Department</legend>
+            
+            <div class="control-group">
+                <label class="control-label">Department: </label>
+                <div class="controls">
+                    <select name="dept_assigned">
+                        <option value="1">Institute of Computing</option>
+                        <option value="2">College of Arts and Sciences</option>
+                        <option value="3">College of Governance Business and Economics</option>
+                        <option value="4">School of Applied Economics</option>
+                        <option value="5">College of Engineering</option>
+                        <option value="6">College of Technology</option>
+                        <option value="7">College of Education</option>
+                    </select>
+                </div>
+            </div>
+            
         </div>
 
         <div class="modal-footer">

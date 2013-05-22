@@ -74,14 +74,18 @@ class Users extends CI_Controller {
     }
     
     public function add() {   
-        $this->form_validation->set_rules('username', 'Username', 'required|alpha_dash|min_length[7]|is_unique[users.username]');
+        $this->form_validation->set_rules('username', 'Username', 'required|alpha_dash|min_length[4]|is_unique[users.username]');
         $this->form_validation->set_rules('password', 'Password', 'required|min_length[7]');
         $this->form_validation->set_rules('confpass', 'Confirm Password', 'required|min_length[7]|matches[password]');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[users.email]');
         $this->form_validation->set_rules('firstname', 'First Name', 'required');
         $this->form_validation->set_rules('middle_initial', 'Middle Name', 'required');
         $this->form_validation->set_rules('lastname', 'Last Name', 'required');
+        $this->form_validation->set_rules('dept_assigned', 'Departments', 'required');
 
+        
+        //var_dump($this->input->post('dept_assigned'));
+        
         if ($this->form_validation->run()) {
             
             $this->user_model->add_user();
@@ -92,6 +96,8 @@ class Users extends CI_Controller {
                 $this->template_engine->set_alert(validation_errors(), 'Error');
             }
         }
+         
+         
     }
 
     public function _output() {

@@ -16,8 +16,8 @@ class Journal_model extends CI_Model{
         parent::__construct();
     }
     
-    public function query_journals(){
-        $query = $this->db->query("select * from journals");
+    public function query_journals($t_deptID){
+        $query = $this->db->query("select * from journals where dept_id = '$t_deptID'");
         
         return $query->result_array();
     }
