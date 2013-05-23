@@ -1,22 +1,5 @@
 /* Created by Artisteer v4.1.0.59861 */
 
-#art-main
-{
-   background: #F5F5F5 url('images/page.png') center center no-repeat fixed;
-   margin:0 auto;
-   font-size: 11px;
-   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
-   font-weight: normal;
-   font-style: normal;
-   line-height: 150%;
-   position: relative;
-   width: 100%;
-   min-height: 100%;
-   left: 0;
-   top: 0;
-   cursor:default;
-   overflow:hidden;
-}
 table, ul.art-hmenu
 {
    font-size: 11px;
@@ -383,19 +366,6 @@ li p, .art-postcontent li p, .art-blockcontent li p
 
 
 
-#art-header-bg
-{
-   position: absolute;
-   overflow:hidden;
-   left:0;
-   margin:0 auto;
-   width: 100%;
-   height: 170px;
-   z-index: auto;
-   background-position: center top;
-   background-image: url('images/header.png');
-   background-repeat: no-repeat;
-}
 
 .art-sheet
 {
@@ -411,44 +381,13 @@ li p, .art-postcontent li p, .art-blockcontent li p
    z-index: auto !important;
 }
 
-.art-header
-{
-   margin:0 auto;
-   height: 170px;
-   background-image: url('images/header.png');
-   background-position: center top;
-   background-repeat: no-repeat;
-   position: relative;
-   z-index: auto !important;
-}
-
-.responsive .art-header 
-{
-   background-image: url('images/header.png');
-   background-position: center center;
-}
-
 .art-header>.widget 
 {
    position:absolute;
    z-index:101;
 }
 
-.art-nav
-{
-   background: #363636 url('images/nav.png') scroll;
-   background: linear-gradient(top, rgba(11, 11, 11, 0.05) 0, rgba(96, 96, 96, 0.08) 100%) no-repeat, url('images/nav.png'), linear-gradient(top, #1A1A1A 0, #525252 100%) no-repeat;
-   background: -webkit-linear-gradient(top, rgba(11, 11, 11, 0.05) 0, rgba(96, 96, 96, 0.08) 100%) no-repeat, url('images/nav.png'), -webkit-linear-gradient(top, #1A1A1A 0, #525252 100%) no-repeat;
-   background: -moz-linear-gradient(top, rgba(11, 11, 11, 0.05) 0, rgba(96, 96, 96, 0.08) 100%) no-repeat, url('images/nav.png'), -moz-linear-gradient(top, #1A1A1A 0, #525252 100%) no-repeat;
-   background: -o-linear-gradient(top, rgba(11, 11, 11, 0.05) 0, rgba(96, 96, 96, 0.08) 100%) no-repeat, url('images/nav.png'), -o-linear-gradient(top, #1A1A1A 0, #525252 100%) no-repeat;
-   background: -ms-linear-gradient(top, rgba(11, 11, 11, 0.05) 0, rgba(96, 96, 96, 0.08) 100%) no-repeat, url('images/nav.png'), -ms-linear-gradient(top, #1A1A1A 0, #525252 100%) no-repeat;
-   background: linear-gradient(top, rgba(11, 11, 11, 0.05) 0, rgba(96, 96, 96, 0.08) 100%) no-repeat, url('images/nav.png'), linear-gradient(top, #1A1A1A 0, #525252 100%) no-repeat;
-   -svg-background: linear-gradient(top, rgba(11, 11, 11, 0.05) 0, rgba(96, 96, 96, 0.08) 100%) no-repeat, url('images/nav.png'), linear-gradient(top, #1A1A1A 0, #525252 100%) no-repeat;
-   margin:0 auto;
-   position: relative;
-   z-index: 499;
-   text-align: left;
-}
+
 
 ul.art-hmenu a, ul.art-hmenu a:link, ul.art-hmenu a:visited, ul.art-hmenu a:hover 
 {
@@ -618,17 +557,6 @@ ul.art-hmenu>li>a:hover,
    text-decoration: none;
 }
 
-ul.art-hmenu>li:before
-{
-   position:absolute;
-   display: block;
-   content:' ';
-   top:0;
-   left:  -1px;
-   width:1px;
-   height: 30px;
-   background: url('images/menuseparator.png') center center no-repeat;
-}
 ul.art-hmenu>li:first-child:before{
    display:none;
 }
@@ -743,16 +671,6 @@ ul.art-hmenu ul:before
 .desktop ul.art-hmenu li li:hover>ul {
    top: 0;
    left: 100%;
-}
-
-ul.art-hmenu ul
-{
-   visibility: hidden;
-   position: absolute;
-   z-index: 10;
-   left: 0;
-   top: 0;
-   background-image: url('images/spacer.gif');
 }
 
 .desktop ul.art-hmenu>li>ul
@@ -1521,17 +1439,6 @@ div.art-vmenublock img
    margin: 0 10px;
 }
 
-.art-vmenublockheader .t:before
-{
-   content:url('images/vmenublockheadericon.png');
-   margin-right:6px;
-   position:relative;
-   display:inline-block;
-   vertical-align:middle;
-   font-size:0;
-   line-height:0;
-   bottom: auto;
-}
 .opera .art-vmenublockheader .t:before
 {
    /* Vertical-align:middle in Opera doesn't need additional offset */
@@ -1839,17 +1746,6 @@ div.art-block img
    margin: 0 10px;
 }
 
-.art-blockheader .t:before
-{
-   content:url('images/blockheadericon.png');
-   margin-right:6px;
-   bottom: 2px;
-   position:relative;
-   display:inline-block;
-   vertical-align:middle;
-   font-size:0;
-   line-height:0;
-}
 .opera .art-blockheader .t:before
 {
    /* Vertical-align:middle in Opera doesn't need additional offset */
@@ -1901,18 +1797,7 @@ div.art-block img
    font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
    text-decoration: none;
 }
-.art-block ul>li:before
-{
-   content:url('images/blockbullets.png');
-   margin-right:6px;
-   bottom: 2px;
-   position:relative;
-   display:inline-block;
-   vertical-align:middle;
-   font-size:0;
-   line-height:0;
-   margin-left: -17px;
-}
+
 .opera .art-block ul>li:before
 {
    /* Vertical-align:middle in Opera doesn't need additional offset */
@@ -2339,17 +2224,6 @@ blockquote p,
    margin: 0;
 }
 
-.art-footer
-{
-   background: #363636 url('images/footer.png') scroll;
-   padding:15px;
-   margin:0 auto;
-   position: relative;
-   color: #FFFFFF;
-   font-size: 11px;
-   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
-   text-align: center;
-}
 
 .art-footer a,
 .art-footer a:link,
@@ -2561,20 +2435,6 @@ blockquote p,
    position: fixed;
    width: 300px;
    z-index: 100;
-}
-
-.art-lightbox-wrapper .loading
-{
-   background: #fff url('images/preloader-01.gif') center center no-repeat;
-   border: 1px solid #b4b4b4;
-   border-radius: 10px;
-   box-shadow: 0 2px 5px #333;
-   height: 32px;
-   opacity: .5;
-   padding: 10px;
-   position: fixed;
-   width: 32px;
-   z-index: 10100;
 }
 
 .art-lightbox-wrapper .arrow
