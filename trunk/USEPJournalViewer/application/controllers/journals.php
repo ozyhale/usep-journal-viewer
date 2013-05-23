@@ -23,7 +23,7 @@ class Journals extends CI_Controller {
         $this->load->library('session');
         
         $this->template_engine->assign('title', 'Journals - ' . $this->site_name);
-        $this->template_engine->assign('footer', 'footer.tpl');
+        $this->template_engine->assign('back_footer', 'b_footer.tpl');
     }
 
     public function index() {}

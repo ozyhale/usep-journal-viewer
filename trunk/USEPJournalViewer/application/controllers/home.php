@@ -29,6 +29,8 @@ class Home extends CI_Controller {
         $this->template_engine->assign('active_menu_item', 'Home');
         $this->template_engine->display('front.tpl');
     }
+    
+    
 
 }
 

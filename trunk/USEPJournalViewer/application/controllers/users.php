@@ -25,7 +25,7 @@ class Users extends CI_Controller {
         $this->template_engine->assign('base_url', base_url());
         $this->template_engine->assign('site_url', site_url());
         $this->template_engine->assign('title', 'Users - ' . $this->site_name);
-        $this->template_engine->assign('footer', 'footer.tpl');
+        $this->template_engine->assign('back_footer', 'b_footer.tpl');
     }
 
     public function index() {}
