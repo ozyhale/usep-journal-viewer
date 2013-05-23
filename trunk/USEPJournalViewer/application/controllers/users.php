@@ -121,16 +121,33 @@ class Users extends CI_Controller {
             $this->template_engine->assign('content', 'back_users.tpl');
             $this->template_engine->assign('active_menu_item', 'Users');
             $this->template_engine->assign('name', $query);
+            $this->template_engine->assign('dept_name', $this->getlist_DeptName());
 //            $this->template_engine->assign('email', $this->user_model->query_users());
             //$this->user_model->
             //$query = $this->user_model->query_users();
 //            var_dump($query[0]['email']);
 //             var_dump($query[1]['email']);
             //print_r($query);
-            
             $this->template_engine->display('back.tpl');
         }
     }
+    
+    
+    
+    public function getlist_DeptName(){
+        $temp_deptname = array(
+            '1' => 'Institute of Computing',
+            '2' => 'College of Arts and Sciences',
+            '3' => 'College of Governance Business and Economics',
+            '4' => 'School of Applied Economics',
+            '5' => 'College of Engineering',
+            '6' => 'College of Technology',
+            '7' => 'College of Education'
+        );
+        
+        return $temp_deptname;
+    }
+    
 
 }
 

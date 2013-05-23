@@ -87,6 +87,7 @@
         </div>
         <div class="modal-footer">
             <button type="submit" name="update" class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>&nbsp;Update</button>
+            <button class="btn" data-dismiss="modal">Cancel</button>
         </div>
 
     </form>

@@ -51,7 +51,7 @@
                     <span class="btn-file">
                         <input type="file" name="cover_img" required/>
                     </span>
-                    <p class="text-warning span8"><small>upload image file only.. recomended size 350x350..</small></p>
+                    <p class="text-warning span8"><small>upload image file only.. recomended size 200x400..</small></p>
                 </div>    
             </div>
                 
@@ -86,6 +86,7 @@
         </div>
         <div class="modal-footer">
             <button type="submit" class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>&nbsp;Add</button>
+            <button class="btn" data-dismiss="modal">Cancel</button>
         </div>
 
     </form>

@@ -4,7 +4,7 @@
     <thead>
         <tr>
             <th style="padding-top: 25px;"><center>Name</center></th>
-            <th style="padding-top: 25px;"><center>Email Address</center></th>
+            <th style="padding-top: 25px;"><center>Assigned Department</center></th>
             <th style="max-width: 80px;"><center>Action</center></th>
         </tr>
     </thead>
@@ -12,7 +12,7 @@
         {foreach from=$name key=k item=i}
            <tr> 
                 <td style="max-width: 200px">{$name[$k]['lastname']}, {$name[$k]['firstname']} {$name[$k]['middle_initial']}.</td>
-                <td style="max-width: 200px">{$name[$k]['email']}</td>
+                <td style="max-width: 200px">{$dept_name[$name[$k]['dept_id']]}</td>
                 <td>
                     <center>
                         <button class="btn btn-success" onclick="window.location.href='{$site_url}users/change_pass/{$name[$k]['username']}'"><i class="icon-wrench icon-white"></i></button>
