@@ -223,6 +223,26 @@ class Journals extends CI_Controller {
         
         return $listodDept[$t_deptID];
     }
+    
+    
+    /*------- Convert url into google.docs viewer.. ----------*/
+    
+    public function converURL($t_thisURL_array){
+        $new_array = array();
+        
+        foreach ($t_thisURL_array as $value) {
+            $temp_url = str_replace("/", "%2F", HOST. "/". $value);
+            $temp_url = str_replace(":", "%3A", $temp_url);
+            
+            array_push($new_array, "http://docs.google.com/viewer?url=". $temp_url .".pdf&embedded=true");
+        }
+        
+        
+      
+        
+        
+        return $new_array;
+    }
 }
 
 ?>
