@@ -35,7 +35,6 @@
                 </div>
 
                 <div class="span4">
-
                     
 
                     {*Sidebar*}
@@ -46,7 +45,7 @@
         </div>
 
         {*Footer*}
-        {include file=$footer}
+        {include file=$back_footer}
         
         {if isset($pre_editJournal)}
             {include file='edit_journal_modal.tpl'}  
