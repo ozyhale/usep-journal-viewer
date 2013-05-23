@@ -27,7 +27,7 @@ class User_model extends CI_Model {
     }
     
     public function query_users(){
-        $query = $this->db->query("SELECT id, username, lastname, firstname, middle_initial, `email` from users where `account_type` = 'admin'");
+        $query = $this->db->query("SELECT id, username, lastname, firstname, middle_initial, `email`, dept_id from users where `account_type` = 'admin'");
         
         return $query->result_array();
     }

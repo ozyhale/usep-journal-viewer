@@ -20,7 +20,7 @@
             <div class="control-group">
                 <label class="control-label">Password: </label>
                 <div class="controls">
-                    <input type="password" name="password" placeholder="Enter password...">
+                    <input type="password" name="password" placeholder="Enter password..." required>
                 </div>
             </div> 
 
@@ -28,6 +28,7 @@
 
         <div class="modal-footer">
             <button class="btn btn-primary" type="submit" name="change_pass"><i class="icon-thumbs-up icon-white"></i>&nbsp;Save</button>
+            <button class="btn" data-dismiss="modal">Cancel</button>
         </div>
     </form>
 </div>
