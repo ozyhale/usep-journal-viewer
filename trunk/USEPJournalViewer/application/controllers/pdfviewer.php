@@ -26,11 +26,17 @@ class pdfviewer extends CI_Controller{
     
     public function view_list($t_type){
         $t_type = str_replace('-', ' ', $t_type);
-        $query_type = $this->Journal_model->get_journals($t_type);
-        //var_dump($query_type);
+        $query_type = $this->Journal_model->get_journals(1, $t_type);
+        
         $this->template_engine->assign('Type', $t_type);
         $this->template_engine->assign('list_journal', $query_type);
         $this->template_engine->assign('pre_viewtables', 'have_value');    
+    }
+    
+    public function view_pdf($t_journalID){
+        $query_journal = $this->Journal_model->query_journals_info($t_journalID, 1);   
+        
+        $this->template_engine->assign('url_pdf', $query_journal[0]['journal_file']);  
     }
     
     public function _output() {
