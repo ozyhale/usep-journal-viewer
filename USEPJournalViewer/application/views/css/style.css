@@ -396,7 +396,7 @@ ul.art-hmenu a, ul.art-hmenu a:link, ul.art-hmenu a:visited, ul.art-hmenu a:hove
    z-index: 11;
 }
 
-ul.art-hmenu, ul.art-hmenu ul
+ul.art-hmenu, ul.art-hmenu 
 {
    display: block;
    margin: 0;
