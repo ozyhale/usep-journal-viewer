@@ -27,7 +27,6 @@ class pdfviewer extends CI_Controller{
     public function view_list($t_type){
         $t_type = str_replace('-', ' ', $t_type);
         $query_type = $this->Journal_model->get_journals(1, $t_type);
-        
         $this->template_engine->assign('Type', $t_type);
         $this->template_engine->assign('list_journal', $query_type);
         $this->template_engine->assign('pre_viewtables', 'have_value');    
