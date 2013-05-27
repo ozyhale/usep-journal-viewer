@@ -18,6 +18,8 @@ class pdfviewer extends CI_Controller{
         $this->load->library('session');
         $this->template_engine->assign('title', 'Journals - PDFviewer');
         
+        
+        var_dump($this->session->userdata('deptID'));
         //$this->full_length  = $this->Journal_model->get_journals('Full Length');
         //$this->conpendium   = $this->Journal_model->get_journals('Conpendum');
     }
@@ -34,8 +36,10 @@ class pdfviewer extends CI_Controller{
     
     public function view_pdf($t_journalID){
         $query_journal = $this->Journal_model->query_journals_info($t_journalID, 1);   
+
+        $this->template_engine->assign('journal_title', $query_journal[0]['Title']); 
+        $this->template_engine->assign('url_pdf', $query_journal[0]['journal_file']); 
         
-        $this->template_engine->assign('url_pdf', $query_journal[0]['journal_file']);  
     }
     
     public function _output() {

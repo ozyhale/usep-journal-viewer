@@ -15,7 +15,7 @@
                         <li><strong>Date Released:</strong> {$list_journal[$k]['date_released']}</li>
                     </ul>
                 </p>
-                <p><a href="" target="_blank" class="btn btn-primary">View</a> <a href="#" class="btn">Action</a></p>
+                <p><a href="{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}" target="_blank" class="btn btn-primary">View</a> <a href="#" class="btn">Action</a></p>
             </div>
         </div>
     </li>
