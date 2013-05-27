@@ -22,6 +22,7 @@ class Home extends CI_Controller {
         $this->template_engine->assign('footer', 'footer.tpl');
         $this->template_engine->assign('file_content', 'home.tpl'); 
         $this->template_engine->assign('set_navActive', '1');
+        
     }
 
     public function index() {}
@@ -53,8 +54,7 @@ class Home extends CI_Controller {
         $this->template_engine->assign('dept_name', $this->getDeptName($this->session->userdata('deptID')));
         $this->template_engine->assign('journal_type', $type);
     }
-    
-    
+
     public function _output() {
         $this->template_engine->assign('header', 'front_header.tpl');
         $this->template_engine->assign('content', 'front_home.tpl');
