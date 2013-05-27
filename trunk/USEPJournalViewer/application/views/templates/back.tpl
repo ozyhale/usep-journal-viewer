@@ -15,6 +15,7 @@
                 padding-bottom: 40px;
             }
         </style>
+        
         <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap-responsive.css">
         <link rel="stylesheet" href="{$base_url}application/views/css/main.css">
         <link rel="stylesheet" href="{$base_url}application/views/dataTables/DT_bootstrap.css">
