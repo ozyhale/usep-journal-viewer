@@ -32,8 +32,8 @@ class Home extends CI_Controller {
     
     public function choose_dept($t_deptID){
         $this->session->set_userdata('deptID', $t_deptID);
-        $query_journals = $this->Journal_model->get_journals($t_deptID, $this->session->userdata('journal_type'));
         $type           = str_replace('-', ' ', $this->session->userdata('journal_type'));
+        $query_journals = $this->Journal_model->get_journals($t_deptID, $type);
         
         $this->template_engine->assign('file_content', 'thumbnails_journals.tpl');
         $this->template_engine->assign('set_navActive', '2');
@@ -44,8 +44,8 @@ class Home extends CI_Controller {
     
     public function choose_journals($t_type){
         $this->session->set_userdata('journal_type', $t_type);
-        $query_journals = $this->Journal_model->get_journals($this->session->userdata('deptID'), $t_type);
         $type           = str_replace('-', ' ', $t_type);
+        $query_journals = $this->Journal_model->get_journals($this->session->userdata('deptID'), $type); 
         
         $this->template_engine->assign('file_content', 'thumbnails_journals.tpl');
         $this->template_engine->assign('set_navActive', '3');
