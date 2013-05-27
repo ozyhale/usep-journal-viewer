@@ -28,11 +28,11 @@ class Journal_model extends CI_Model{
         return $query->result_array();
     }
     
-    public function get_journals($t_type){
-        $query = $this->db->get_where('journals', array('type' => $t_type));
+    public function get_journals($t_deptID, $t_type){
+        $query = $this->db->get_where('journals', array('dept_id' => $t_deptID, 'type' => $t_type));
         
         return $query->result_array();
-    }
+    } 
     
     public function delete($t_journalID){
         $this->db->delete('journals', array('id' => $t_journalID)); 

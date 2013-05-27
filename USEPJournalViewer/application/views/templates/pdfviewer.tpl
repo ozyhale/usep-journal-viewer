@@ -97,16 +97,16 @@
             <!--
             <iframe src="http://en.pdf24.org/reader?open=http%3A%2F%2Fwww.cte.bilkent.edu.tr%2F~cte301%2FPHP_Notes_01.pdf" style="border:none; width:100%; height:600px" ></iframe>
             -->
-            
+
             <div style="border: 1px solid; box-shadow: 10px 10px 5px #888888; margin-top: -15px; border-top-left-radius: 5px; border-top-right-radius: 5px;">
 
-                <div style="margin-top: -10px;" id="iframe"><center><h4 style="font-family: georgia;">Book 1</h4></center></div>
+                <div style="margin-top: -10px;" id="iframe"><center><h4 style="font-family: georgia;">{if isset($journal_title)} {$journal_title} {else} Choose PDF File {/if}</h4></center></div>
                 <applet code="EmbedPDF.class" archive="{$base_url}application/views/applet/fontsseparate/EmbedPDF.jar" style="width: 100%; height: 620px;">
 
                     <!-- Use the following parameters to configure Embed PDF: -->
 
                     <!-- The URL of the PDF document that we want to show: -->
-                    <param name="pdf" value="{$base_url}application/views/example.pdf"/> 
+                    <param name="pdf" value="{$base_url}{$url_pdf}"/> 
 
                     <!-- The location of the font files: -->
                     <param name="fonts" value="fontsseparate"/> 
@@ -142,7 +142,7 @@
                     <param name="centerimage" value="true"/>
 
                     <!-- If the browser does not supprt java, we just provide a link to the PDF-document. -->
-                    <a href="{$base_url}application/views/example.pdf">example.pdf</a>
+                    <a href="{$base_url}{$url}">view pdf</a>
                 </applet>
             </div>      
             <hr>
