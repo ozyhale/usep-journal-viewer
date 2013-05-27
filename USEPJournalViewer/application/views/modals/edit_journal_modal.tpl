@@ -20,7 +20,7 @@
                 <div class="controls">
                     <select name="type" required>
                         <option {if $pre_jtype eq "Full Length"} seleted {/if}>Full Length</option>
-                        <option {if $pre_jtype eq "Conpendum"} seleted {/if}>Conpendum</option>
+                        <option {if $pre_jtype eq "Conpendum"} seleted {/if}>Compendium</option>
                     </select>
                 </div>
             </div>

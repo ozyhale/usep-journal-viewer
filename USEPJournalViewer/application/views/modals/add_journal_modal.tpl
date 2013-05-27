@@ -25,7 +25,7 @@
                 <div class="controls">
                     <select name="type" required>
                         <option>Full Length</option>
-                        <option>Conpendum</option>
+                        <option>Compendium</option>
                     </select>
                 </div>
             </div>
