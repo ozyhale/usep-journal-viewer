@@ -6,7 +6,7 @@
             <h3>Change Password</h3>
         </div>
 
-        <div class="modal-body">
+        <div class="modal-body b_modal">
 
             <legend>Login Information</legend>
 

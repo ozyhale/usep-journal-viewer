@@ -23,17 +23,17 @@
                background-size: 1020px 100%;
            }
            #back_body{
-               margin-top: 80px;
-               margin-bottom: 10px;
+               margin-top: 65px;
+               margin-bottom: 20px;
                margin-left: -7px;
                margin-right: -8px;
-               border: 1px solid #000000;
+               border: 2px solid #000000;
                border-radius: 16px 16px 16px 16px;
-               box-shadow: rgb(51,0,0);
                padding: 10px 10px 10px 10px;
+               box-shadow: 7px 7px 5px rgb(51,0,0);
            }
            #back_sidebar{
-               margin-top: 80px;
+               margin-top: 65px;
            }
            #back_footer{
                background:#9b060b url('{$base_url}application/views/img/footer.png') scroll;
@@ -41,10 +41,17 @@
                background-repeat: no-repeat;
                background-position: center center;
                background-size: 1020px 100%;
+               box-shadow: 7px 7px 5px rgb(34,0,10);
            }
            .b_side{
                background: -moz-linear-gradient(center top, rgb(144,2,3) 0%, rgb(64,1,15) 100%) repeat scroll 0% 0% transparent;
                border-radius: 16px 16px 16px 16px;
+               box-shadow: 7px 7px 5px rgb(51,0,0);
+           }
+           .b_modal{
+               border: 2px solid #000000;
+               border-radius: 16px 16px 16px 16px;
+               margin-left: 2px;
            }
         </style>
         

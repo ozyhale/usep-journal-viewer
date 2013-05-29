@@ -6,7 +6,7 @@
             <h3>List of {$Type} Journals</h3>
         </div>
 
-        <div class="modal-body">
+        <div class="modal-body b_modal">
             <table class="table table-bordered table-hover">
                 <tr>
                     <th style="max-width: 50px;"><center>Title</center></th>
