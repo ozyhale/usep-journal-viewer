@@ -10,10 +10,42 @@
         <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap.css">
 
         <style>
-            body {
+           /*body {
                 padding-top: 60px;
                 padding-bottom: 40px;
             }
+           */
+           #back_header{
+               background:#9b060b url('{$base_url}application/views/img/journal.png') scroll;
+               height: 102px; 
+               background-repeat: no-repeat;
+               background-position: center center;
+               background-size: 1020px 100%;
+           }
+           #back_body{
+               margin-top: 80px;
+               margin-bottom: 10px;
+               margin-left: -7px;
+               margin-right: -8px;
+               border: 1px solid #000000;
+               border-radius: 16px 16px 16px 16px;
+               box-shadow: rgb(51,0,0);
+               padding: 10px 10px 10px 10px;
+           }
+           #back_sidebar{
+               margin-top: 80px;
+           }
+           #back_footer{
+               background:#9b060b url('{$base_url}application/views/img/footer.png') scroll;
+               height: 50px; 
+               background-repeat: no-repeat;
+               background-position: center center;
+               background-size: 1020px 100%;
+           }
+           .b_side{
+               background: -moz-linear-gradient(center top, rgb(144,2,3) 0%, rgb(64,1,15) 100%) repeat scroll 0% 0% transparent;
+               border-radius: 16px 16px 16px 16px;
+           }
         </style>
         
         <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap-responsive.css">
@@ -32,14 +64,18 @@
                 <div class="span8">
                     {$alert}
                     {*Content*}
+                    <div id="back_body">
                     {include file=$content}
+                    </div>
                 </div>
 
                 <div class="span4">
                     
 
                     {*Sidebar*}
+                    <div id="back_sidebar">
                     {include file=$sidebar}
+                    </div>
                 </div>
             </div>
 

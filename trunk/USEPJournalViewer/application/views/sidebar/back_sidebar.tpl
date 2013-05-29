@@ -1,6 +1,7 @@
-<div class="well sidebar-nav">
+<div class="well sidebar-nav b_side">
     <ul class="nav nav-list">
-        <li class="nav-header">Shortcuts</li>
+        <li class="nav-header"><i class="icon-globe icon-white"></i>&nbsp;Shortcuts</li>
+        <hr/>
 
         <!-- add journal -->
         <li>
@@ -41,7 +42,9 @@
             </li>
         {/if}
         
-        <li class="nav-header">User Navigation</li>
+        <br/>
+        <li class="nav-header"><i class="icon-user icon-white"></i>&nbsp;User Navigation</li>
+        <hr/>
 
         <!-- edit user -->
 
