@@ -6,7 +6,7 @@
             <h3>Account Settings</h3>
         </div>
 
-        <div class="modal-body">
+        <div class="modal-body b_modal">
 
             {if isset($add_user_alert)}
                 {$add_user_alert}

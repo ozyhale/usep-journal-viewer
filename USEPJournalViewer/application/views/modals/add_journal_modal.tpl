@@ -11,7 +11,7 @@
             </div>
         {/if*}    
 
-        <div class="modal-body">
+        <div class="modal-body b_modal">
             <legend>Journal Information</legend>
 
             <div class="control-group">
