@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="{$base_url}application/views/css/style.css" media="screen">
         <link rel="stylesheet" href="{$base_url}application/views/css/style.responsive.css" media="all">
         <link rel="shortcut icon" href="{$base_url}application/views/img/favicon.ico" type="image/x-icon">
-
+       
         <!-- --------------------- js ------------------------ -->
         <script src="{$base_url}application/views/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script type="text/javascript" src="{$base_url}application/views/content/imageflow.packed.js"></script>
@@ -26,7 +26,7 @@
         <script src="{$base_url}application/views/js/jquery.js"></script>
         <script src="{$base_url}applicaiton/views/js/script.js"></script>
         <script src="{$base_url}application/views/js/script.responsive.js"></script>
-
+        
         <!-- ----------------- start of css ------------------------ -->
         <style>
             #art-main{
@@ -165,7 +165,7 @@
                 width: 32px;
                 z-index: 10100;
             }
-
+            
         </style>
         <!-- ------------------- end of css ------------------------ -->
 
