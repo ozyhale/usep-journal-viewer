@@ -65,9 +65,10 @@
         <div class="container-fluid">
             <div class="row-fluid">
                 <div class="span8">
-                    {$alert}
+                    
                     {*Content*}
                     <div id="back_body">
+                        {$alert}
                     {include file=$content}
                     </div>
                 </div>
