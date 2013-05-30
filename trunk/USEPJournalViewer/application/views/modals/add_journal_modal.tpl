@@ -29,20 +29,23 @@
                     </select>
                 </div>
             </div>
-
+            
+            {literal}
             <div class="control-group">
                 <label class="control-label">Volume Number:</label>
                 <div class="controls">
-                    <input type="text" name="vol_number" placeholder="Enter Volume Number..." required>
+                    <input type="text" name="vol_number" placeholder="Enter Volume Number..." required pattern="[0-9]{1,5}">
                 </div>
             </div>
+            
             <div class="control-group">
                 <label class="control-label">ISSN:</label>
                 <div class="controls">
-                    <input type="text" name="issn" placeholder="Enter ISSN..." required>
+                    <input type="text" name="issn" placeholder="Enter ISSN..." required pattern="[0-9]{1,5}-[0-9]{1,5}">
                 </div>
             </div>
-
+            {/literal}
+            
             <legend>Journal File</legend>
 
             <div class="control-group">

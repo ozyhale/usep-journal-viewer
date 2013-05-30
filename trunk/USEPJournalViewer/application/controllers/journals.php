@@ -109,7 +109,7 @@ class Journals extends CI_Controller {
     }
     
     public function delete($t_journalID){
-        $query_journal  = $this->Journal_model->query_journals_info($t_journalID);  
+        $query_journal  = $this->Journal_model->query_journals_info($t_journalID, $this->session->userdata('dept_id'));  
         $this->Journal_model->delete($t_journalID);
         
         if(file_exists($query_journal[0]['cover_page'])){
@@ -119,6 +119,8 @@ class Journals extends CI_Controller {
         if(file_exists($query_journal[0]['journal_file'])){
             unlink($query_journal[0]['journal_file']);
         }
+        
+        $this->template_engine->set_alert('Successfully Deleted and journal!', 'Success');
     }
     
     public function add(){
