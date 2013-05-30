@@ -48,11 +48,7 @@
                border-radius: 16px 16px 16px 16px;
                box-shadow: 7px 7px 5px rgb(51,0,0);
            }
-           .b_modal{
-               border: 2px solid #000000;
-               border-radius: 16px 16px 16px 16px;
-               margin-left: 2px;
-           }
+           
         </style>
         
         <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap-responsive.css">
