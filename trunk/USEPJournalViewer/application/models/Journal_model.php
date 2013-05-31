@@ -38,6 +38,20 @@ class Journal_model extends CI_Model{
         $this->db->delete('journals', array('id' => $t_journalID)); 
     }
     
+    public function issnExist($t_issn){
+        $query = $this->db->query("select * from journals where ISSN = '$t_issn'");
+        
+        return $query->num_rows() > 0;
+    }
+    
+    public function titleExist($t_title){
+        $query = $this->db->query("select * from journals where Title = '$t_title'");
+        
+        
+        //print_r($query->num_rows() > 0);
+        return $query->num_rows() > 0;
+    }
+    
     public function insert($t_coverpage_path, $t_pdffile_path, $t_deptID){
         $data = array(
                 'dept_id' => $t_deptID,

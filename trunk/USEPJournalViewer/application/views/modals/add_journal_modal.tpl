@@ -54,7 +54,7 @@
                     <span class="btn-file">
                         <input type="file" name="cover_img" required/>
                     </span>
-                    <p class="text-warning span8"><small>upload image file only.. recomended size 200x400..</small></p>
+                    <p class="text-warning span8"><small>upload image file only.. recomended size 200x200..</small></p>
                 </div>    
             </div>
                 

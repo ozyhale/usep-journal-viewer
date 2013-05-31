@@ -135,9 +135,21 @@ class Journals extends CI_Controller {
         
         if ($this->form_validation->run()) {
             
+            
+            if($this->Journal_model->titleExist(trim($this->input->post('title')))){
+                $this->template_engine->set_alert('Title was already Exist.. !', 'Error');
+            
+                return;
+            }else if($this->Journal_model->issnExist(trim($this->input->post('issn')))){
+                $this->template_engine->set_alert('ISSN was already Exist.. ', 'Error');       
+            
+                return;
+            }
+            
             do{
                 $name = rand(1000000, 9999999) . rand(1000000, 9999999);
             }while(file_exists($name));
+            
             
             $pdffile_path = 'application/tmp/pdf_file/' .$name .".pdf"; 
             $this->load->library('upload_class', $_FILES['pdf_file'], 'upload_pdf_file');
