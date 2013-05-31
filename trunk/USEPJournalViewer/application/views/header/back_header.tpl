@@ -1,7 +1,7 @@
 <header>
     <div id="back_header"> </div>
-</header>
-<div class="navbar navbar-inverse navbar-fixed-top" style="margin-top: 100px; padding-top: 2px;">
+    </header>
+<div class="navbar navbar-inverse">
     <div class="navbar-inner">
         <div class="container-fluid">
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -32,3 +32,5 @@
         </div>
     </div>
 </div>
+
+

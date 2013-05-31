@@ -23,7 +23,7 @@
                background-size: 1020px 100%;
            }
            #back_body{
-               margin-top: 65px;
+               margin-top: 5px;
                margin-bottom: 20px;
                margin-left: -7px;
                margin-right: -8px;
@@ -33,7 +33,7 @@
                box-shadow: 7px 7px 5px rgb(51,0,0);
            }
            #back_sidebar{
-               margin-top: 65px;
+               margin-top: 5px;
            }
            #back_footer{
                background:#9b060b url('{$base_url}application/views/img/footer.png') scroll;
