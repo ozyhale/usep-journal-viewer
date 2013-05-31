@@ -1,5 +1,9 @@
 var site_url = "http://localhost/USEPJournalViewer/index.php/";
 
+function _target(val){
+    window.open(val, '_blank');
+}
+
 function onclick_delete_users(id, lname, fname, minitial){
     bootbox.confirm("Are you sure you want to delete <strong>" +lname +", " +fname +" " +minitial +"."  +"</strong> ?", function(result) {
         if (result === true) {
