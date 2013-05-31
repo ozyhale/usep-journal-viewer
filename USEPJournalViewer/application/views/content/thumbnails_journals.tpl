@@ -5,7 +5,7 @@
     {foreach from=$list_journal key=k item=l}
     <li class="span4">
         <div class="thumbnail">
-            <center><img data-src="holder.js/160x120" alt="" src="{$base_url}{$list_journal[$k]['cover_page']}"></center>
+            <center><img style="cursor: pointer;" data-src="holder.js/160x120" alt="" src="{$base_url}{$list_journal[$k]['cover_page']}" onclick="_target('{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}')"></center>
             <div class="caption">
                 <h3>{$list_journal[$k]['Title']}</h3>
                 <p>
@@ -15,7 +15,6 @@
                         <li><strong>Date Released:</strong> {$list_journal[$k]['date_released']}</li>
                     </ul>
                 </p>
-                <p><a href="{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}" target="_blank" class="btn btn-primary">View</a> <a href="#" class="btn">Action</a></p>
             </div>
         </div>
     </li>
