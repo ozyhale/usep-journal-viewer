@@ -17,7 +17,7 @@ class Journal_model extends CI_Model{
     }
     
     public function query_journals($t_deptID){
-        $query = $this->db->query("select * from journals where dept_id = '$t_deptID'");
+        $query = $this->db->query("select * from journals where dept_id = '$t_deptID' order by `Title`");
         
         return $query->result_array();
     }
