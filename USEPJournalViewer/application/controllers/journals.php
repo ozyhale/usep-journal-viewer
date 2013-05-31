@@ -72,6 +72,9 @@ class Journals extends CI_Controller {
                     $coverpage_path = 'application/tmp/cover_page/' .$name ."png"; 
                     $this->load->library('upload_class', $_FILES['cover_img'], 'upload_img');
                     $this->upload_img->file_overwrite               = true;
+                    $this->upload_img->image_resize                 = true;
+                    $this->upload_img->image_y                      = 200;
+                    $this->upload_img->image_x                      = 200;
                     $this->upload_img->image_convert                = 'png';
                     $this->upload_img->allowed                      = array("image/jpeg", "image/png", "image/gif", "image/pjpeg");
                     $this->upload_img->file_new_name_body           = $name; 
@@ -168,6 +171,9 @@ class Journals extends CI_Controller {
             $coverpage_path = 'application/tmp/cover_page/' .$name .".png"; 
             $this->load->library('upload_class', $_FILES['cover_img'], 'upload_img');
             $this->upload_img->file_overwrite               = true;
+            $this->upload_img->image_resize                 = true;
+            $this->upload_img->image_y                      = 200;
+            $this->upload_img->image_x                      = 200;
             $this->upload_img->image_convert                = 'png';
             $this->upload_img->allowed                      = array("image/jpeg", "image/png", "image/gif", "image/pjpeg");
             $this->upload_img->file_new_name_body           = $name; 
