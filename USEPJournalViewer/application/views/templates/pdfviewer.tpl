@@ -27,19 +27,27 @@
         
         <style type="text/css">
             body{
-                padding-top: 15px;
+                padding-top: 10px;
                 background-color: #cecece;
             }
             #header{
-                background-image: url('{$base_url}application/views/img/images/header_pdfviewer.png');
+                background-image: url('{$base_url}application/views/img/journal.png');
                 background-repeat: no-repeat;
+                background-position: center center;
+                background-color: rgb(125,26,26);
+                width: 100%;
                 height: 101px;
+                margin-top: -10px;
+                margin-bottom: 10px;
 
             }
             #footer{
-                background-image: url('{$base_url}application/views/img/images/footer_pdfviewer.png');
+                background-image: url('{$base_url}application/views/img/footer.png');
                 background-repeat: no-repeat;
+                background-position: center center;
+                background-color: rgb(125,26,26);
                 height: 50px;
+                margin-top: -25px;
             }
 
             #form_id{
@@ -59,7 +67,13 @@
                 border-top-left-radius: 5px;
                 border-top-right-radius: 5px;
             }
-
+            
+            .pdf_container{
+                margin-left: 3px;
+                margin-top: -8px;
+                width: 99%;
+            }
+            
         </style>
         
     </head>
@@ -71,10 +85,10 @@
         {$list_ofSubcat|@var_dump} 
         {$choose_urlPDF|@var_dump*}
         
-        <div class="container socs-content" >
-            <div class="container" id="header"> </div>
+         <div class="container" id="header"> </div>
+        <div class="container socs-content pdf_container" >
             <div class="navbar">
-                <div class="navbar-inner">
+                <div class="navbar-inner pdf_nav">
                     <ul class="nav">
                         <li class="active"><a href="">Home</a></li>
                         <li class="dropdown">
@@ -100,7 +114,7 @@
 
             <div style="border: 1px solid; box-shadow: 10px 10px 5px #888888; margin-top: -15px; border-top-left-radius: 5px; border-top-right-radius: 5px;">
 
-                <div style="margin-top: -10px;" id="iframe"><center><h4 style="font-family: georgia;">{if isset($journal_title)} {$journal_title} {else} Choose PDF File {/if}</h4></center></div>
+                <div style="margin-top: -10px;" id="iframe"><center><h4 style="font-family: georgia; padding-top: 3px; padding-bottom: 3px;">{if isset($journal_title)} {$journal_title} {else} Choose PDF File {/if}</h4></center></div>
                 <applet code="EmbedPDF.class" archive="{$base_url}application/views/applet/fontsseparate/EmbedPDF.jar" style="width: 100%; height: 620px;">
 
                     <!-- Use the following parameters to configure Embed PDF: -->
@@ -147,9 +161,9 @@
             </div>      
             <hr>
 
-            <footer id="footer"></footer> 
+            
         </div>      
-
+                <footer id="footer"></footer> 
         {if isset($pre_viewtables)}
             {include file="view_list.tpl"}
         {/if}
