@@ -175,6 +175,7 @@
                 margin-top: 5px;
                 margin-left: 10px;
                 margin-bottom: 5px;
+                opacity: 0.8;
             }
 
             #f_title{
@@ -218,7 +219,7 @@
             }
             
             #f_body{
-                height: 800px;
+                min-height: 600px;
                 background: #F9FAFB url('{$base_url}application/views/img/bg.png') scroll no-repeat;
                 background-position:center center;
             }
