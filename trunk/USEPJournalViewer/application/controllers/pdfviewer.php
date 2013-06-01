@@ -35,8 +35,8 @@ class pdfviewer extends CI_Controller{
     }
     
     public function view_pdf($t_journalID){
-        $query_journal = $this->Journal_model->query_journals_info($t_journalID, 1);   
-
+        $query_journal = $this->Journal_model->query_journals_info($t_journalID, 1);
+        
         $this->template_engine->assign('journal_title', $query_journal[0]['Title']); 
         $this->template_engine->assign('url_pdf', $query_journal[0]['journal_file']); 
         
