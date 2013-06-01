@@ -217,6 +217,12 @@
                 -webkit-box-shadow: 7px 7px 5px rgb(5, 10, 15);
             }
             
+            #f_body{
+                height: 800px;
+                background: #F9FAFB url('{$base_url}application/views/img/bg.png') scroll no-repeat;
+                background-position:center center;
+            }
+            
         </style>
         <!-- ------------------- end of css ------------------------ -->
 
@@ -229,8 +235,9 @@
                 {*Header*}
                 {include file=$header}
 
-               
+                            <div id="f_body">
                             {include file=$content}
+                            </div>
                 <div>
                     {*Footer*}
                     {include file=$footer}
