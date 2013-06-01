@@ -45,6 +45,9 @@
            }
            .b_side{
                background: -moz-linear-gradient(center top, rgb(144,2,3) 0%, rgb(64,1,15) 100%) repeat scroll 0% 0% transparent;
+               background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(144,2,3)), color-stop(100%, rgb(64,1,15)));
+               background: -webkit-linear-gradient(center top, rgb(144,2,3) 0%, rgb(64,1,15) 100%);
+               background: -o-linear-gradient(center top, rgb(144,2,3) 0%, rgb(64,1,15) 100%);
                border-radius: 16px 16px 16px 16px;
                box-shadow: 7px 7px 5px rgb(51,0,0);
            }

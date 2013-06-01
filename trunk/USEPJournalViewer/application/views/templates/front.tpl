@@ -166,6 +166,57 @@
                 z-index: 10100;
             }
             
+            .f_hero{
+                background: -moz-linear-gradient(top, #cedbe9 0%, #aac5de 24%, #419ad6 60%, #4bb8f0 90%, #26558b 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cedbe9), color-stop(24%, #aac5de), color-stop(60%, #419ad6), color-stop(90%, #4bb8f0), color-stop(100%, #26558b));
+                background: -o-linear-gradient(top, #cedbe9 0%, #aac5de 24%, #419ad6 60%, #4bb8f0 90%, #26558b 100%);
+                box-shadow: 5px 5px 8px 2px #26557a;
+                -webkit-box-shadow: 5px 5px 8px 2px #26557a;
+                margin-top: 5px;
+                margin-left: 10px;
+                margin-bottom: 5px;
+            }
+
+            #f_title{
+                padding-left: 10px;
+                margin-bottom: -15px;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                background: -moz-linear-gradient(left, #b5bdc8 0%, #29343a 80%, #28343b 100%);
+                background: -webkit-gradient(linear, left top, right top, color-stop(0%, #b5bdc8), color-stop(80%, #29343a), color-stop(100%, #28343b));
+                background: -o-linear-gradient(left, #b5bdc8 0%, #29343a 80%, #28343b 100%);
+            }
+
+            #f_dname{
+                color: #000;
+                text-shadow: 2px 2px 2px #80090f;
+            }
+
+            .f_thumb{
+                -webkit-border-radius: 8px;
+                border-radius: 8px;
+                border-color: #000;
+                background: -moz-linear-gradient(top, #ebf1f6 0%, #abd3ee 80%, #89c3eb 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ebf1f6), color-stop(80%, #abd3ee), color-stop(100%, #89c3eb));
+                background: -o-linear-gradient(top, #ebf1f6 0%, #abd3ee 80%, #89c3eb 100%);
+                
+            }
+
+            .f_thumb:hover{
+                border-color: red;
+                background: -moz-linear-gradient(top, #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d0e4f7), color-stop(24%, #73b1e7), color-stop(79%, #0a77d5), color-stop(100%, #87bcea));
+                background: -o-linear-gradient(top, #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%);
+                -moz-transform: scale(0.95) rotate(-2deg);
+                -webkit-tranform: scale(0.95) rotate(-2deg);
+                -o-tranform: scale(0.95) rotate(-2deg);
+            }
+
+            .f_footer{
+                box-shadow: 7px 7px 5px rgb(5, 10, 15);
+                -webkit-box-shadow: 7px 7px 5px rgb(5, 10, 15);
+            }
+            
         </style>
         <!-- ------------------- end of css ------------------------ -->
 
