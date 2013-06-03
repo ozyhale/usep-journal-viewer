@@ -8,7 +8,7 @@
     {foreach from=$list_journal key=k item=l}
     <li class="span4">
         <div class="thumbnail f_thumb">
-            <center><img style="cursor: pointer;" data-src="holder.js/160x120" alt="" src="{$base_url}{$list_journal[$k]['cover_page']}" onclick="_target('{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}')"></center>
+            <center><img style="cursor: pointer;" data-src="holder.js/160x120" alt="" src="{$base_url}{$list_journal[$k]['cover_page']}" onclick="_target('{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}/{$_deptID}')"></center>
             <div class="caption">
                 <h3>{$list_journal[$k]['Title']}</h3>
                 <p>

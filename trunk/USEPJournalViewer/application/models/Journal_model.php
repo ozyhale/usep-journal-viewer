@@ -28,6 +28,12 @@ class Journal_model extends CI_Model{
         return $query->result_array();
     }
     
+    public function get_journals_info($key){
+        $query = $this->db->query("select * from journals where id = '$key'");
+        
+        return $query->result_array();
+    }
+    
     public function get_journals($t_deptID, $t_type){
         $query = $this->db->get_where('journals', array('dept_id' => $t_deptID, 'type' => $t_type));
         
