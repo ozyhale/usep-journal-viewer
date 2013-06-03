@@ -24,7 +24,7 @@
                         <td style="max-width: 50px;">{$list_journal[$k]['date_released']}</td>
                         <td>
                             <center>
-                                <a href="{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}"><i class="icon-eye-open"></i> View PDF</a>
+                                <a href="{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}/{$_deptID}"><i class="icon-eye-open"></i> View PDF</a>
                             </center>
                         </td>
                     </tr>

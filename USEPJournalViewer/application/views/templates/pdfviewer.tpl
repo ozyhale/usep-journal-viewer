@@ -94,8 +94,8 @@
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="">Journal Type<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="{$site_url}pdfviewer/view_list/Full-Length"> Full Length </a></li>
-                                <li><a href="{$site_url}pdfviewer/view_list/Compendium"> Compendium </a></li>
+                                <li><a href="{$site_url}pdfviewer/view_list/Full-Length/{$_deptID}"> Full Length </a></li>
+                                <li><a href="{$site_url}pdfviewer/view_list/Compendium/{$_deptID}"> Compendium </a></li>
                             </ul>
                         </li>
                         <li><a  href=""> About Us </a></li> 

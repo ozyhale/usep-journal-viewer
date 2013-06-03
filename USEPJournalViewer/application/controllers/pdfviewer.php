@@ -26,23 +26,23 @@ class pdfviewer extends CI_Controller{
     
     public function index() {}
     
-    public function view_list($t_type){
+    public function view_list($t_type, $_deptID){
         $t_type = str_replace('-', ' ', $t_type);
-        $query_type = $this->Journal_model->get_journals(1, $t_type);
+        $query_type = $this->Journal_model->get_journals($_deptID, $t_type);
         $this->template_engine->assign('Type', $t_type);
         $this->template_engine->assign('list_journal', $query_type);
-        $this->template_engine->assign('pre_viewtables', 'have_value');    
+        $this->template_engine->assign('pre_viewtables', 'have_value');  
+        $this->template_engine->assign('_deptID', $_deptID); 
     }
     
-    public function view_pdf($t_journalID){
-        $query_journal = $this->Journal_model->query_journals_info($t_journalID, 1);
-        
+    public function view_pdf($t_journalID, $_deptID){
+        $query_journal = $this->Journal_model->get_journals_info($t_journalID);
         $this->template_engine->assign('journal_title', $query_journal[0]['Title']); 
         $this->template_engine->assign('url_pdf', $query_journal[0]['journal_file']); 
-        
+        $this->template_engine->assign('_deptID', $_deptID); 
     }
     
-    public function _output() {
+    public function _output() { 
         $this->template_engine->display('pdfviewer.tpl');
     }
 }

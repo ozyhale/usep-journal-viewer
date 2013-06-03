@@ -47,6 +47,7 @@ class Home extends CI_Controller {
         $this->template_engine->assign('list_journal', $query_journals);
         $this->template_engine->assign('dept_name', $this->getDeptName($t_deptID));
         $this->template_engine->assign('journal_type', $type);
+        $this->template_engine->assign('_deptID', $this->session->userdata('deptID'));
     }
     
     public function choose_journals($t_type){
@@ -59,6 +60,7 @@ class Home extends CI_Controller {
         $this->template_engine->assign('list_journal', $query_journals); 
         $this->template_engine->assign('dept_name', $this->getDeptName($this->session->userdata('deptID')));
         $this->template_engine->assign('journal_type', $type);
+        $this->template_engine->assign('_deptID', $this->session->userdata('deptID'));
     }
 
     public function _output() {
@@ -66,6 +68,8 @@ class Home extends CI_Controller {
         $this->template_engine->assign('content', 'front_home.tpl');
         $this->template_engine->assign('active_menu_item', 'Home');
         $this->template_engine->display('front.tpl');
+        
+        //var_dump($this->session->userdata('deptID'));
     }
     
     
