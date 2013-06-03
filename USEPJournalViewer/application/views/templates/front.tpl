@@ -201,11 +201,11 @@
                 background: -moz-linear-gradient(top, #ebf1f6 0%, #abd3ee 80%, #89c3eb 100%);
                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ebf1f6), color-stop(80%, #abd3ee), color-stop(100%, #89c3eb));
                 background: -o-linear-gradient(top, #ebf1f6 0%, #abd3ee 80%, #89c3eb 100%);
+                max-height: 500px;
                 
             }
 
             .f_thumb:hover{
-                border-color: red;
                 background: -moz-linear-gradient(top, #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%);
                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d0e4f7), color-stop(24%, #73b1e7), color-stop(79%, #0a77d5), color-stop(100%, #87bcea));
                 background: -o-linear-gradient(top, #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%);
