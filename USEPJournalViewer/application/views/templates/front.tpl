@@ -191,7 +191,7 @@
 
             #f_dname{
                 color: #000;
-                text-shadow: 2px 2px 2px #80090f;
+                text-shadow: 2px 1px 2px #fff;
             }
 
             .f_thumb{
