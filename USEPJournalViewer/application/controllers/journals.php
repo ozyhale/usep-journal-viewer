@@ -41,8 +41,8 @@ class Journals extends CI_Controller {
             //var_dump($_FILES['pdf_file']);
             
             if ($this->form_validation->run()) {
-                $pdffile_path       = "";
-                $coverpage_path     = "";
+                $pdffile_path       = $query_journal[0]['journal_file'];
+                $coverpage_path     = $query_journal[0]['cover_page'];
                 do{
                     $name = rand(1000000, 9999999) . rand(1000000, 9999999);
                 }while(file_exists($name));
@@ -69,7 +69,7 @@ class Journals extends CI_Controller {
                 }
                 
                 if($_FILES['cover_img']['name'] != ""){ 
-                    $coverpage_path = 'application/tmp/cover_page/' .$name ."png"; 
+                    $coverpage_path = 'application/tmp/cover_page/' .$name .".png"; 
                     $this->load->library('upload_class', $_FILES['cover_img'], 'upload_img');
                     $this->upload_img->file_overwrite               = true;
                     $this->upload_img->image_resize                 = true;
