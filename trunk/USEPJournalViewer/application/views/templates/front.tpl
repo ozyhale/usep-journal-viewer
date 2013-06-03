@@ -219,16 +219,19 @@
                 -webkit-box-shadow: 7px 7px 5px rgb(5, 10, 15);
             }
             
-            #f_body{
+            .f_body{
                 min-height: 600px;
-                background: #F9FAFB url('{$base_url}application/views/img/bg.png') scroll no-repeat;
+                {if isset($list_journal[0]['Title'])}
+                    background: #F9FAFB url('{$base_url}application/views/img/bg.png') scroll no-repeat;
+                {else}
+                    background: #F9FAFB url('{$base_url}application/views/img/bg2.png') scroll no-repeat;
+                {/if}
                 background-position:center center;
             }
             
         </style>
         <!-- ------------------- end of css ------------------------ -->
 
-    </head>
     <body>
         <div class="art-main">
             <div id="art-header-bg">
@@ -237,9 +240,9 @@
                 {*Header*}
                 {include file=$header}
 
-                            <div id="f_body">
+                            
                             {include file=$content}
-                            </div>
+                            
                 <div>
                     {*Footer*}
                     {include file=$footer}

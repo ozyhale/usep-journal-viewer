@@ -23,7 +23,7 @@
     }
 </style>
 
-<div class="row-fluid">
+<div class="row-fluid f_body">
     <div class="accordion span3" id="accordion1">
         <div class="accordion-group">
             <div class="accordion-heading">
