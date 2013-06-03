@@ -1,6 +1,4 @@
-<header>
-    <div id="back_header"> </div>
-    </header>
+<header id="back_header"></header>
 <div class="navbar navbar-inverse">
     <div class="navbar-inner">
         <div class="container-fluid">
