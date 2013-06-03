@@ -21,20 +21,20 @@ class Home extends CI_Controller {
         $this->template_engine->assign('title', 'Home - ' . $this->site_name);
         $this->template_engine->assign('footer', 'footer.tpl');
         $this->template_engine->assign('file_content', 'home.tpl'); 
-        $this->template_engine->assign('set_navActive', '1'); 
+        $this->template_engine->assign('set_navActive', '1');
+        
           
         if(!$this->session->userdata('journal_type') && !$this->session->userdata('deptID')){
             $this->session->set_userdata('journal_type', 'Compendium');
             $this->session->set_userdata('deptID', '1');  
-        }
-        
-           
+        } 
     }
 
     public function index() {}
 
     public function home(){
         $this->template_engine->assign('set_navActive', '1');
+        $this->template_engine->assign('this_home', '1');   
     }
     
     public function choose_dept($t_deptID){

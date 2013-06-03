@@ -4,6 +4,7 @@
 <hr width="90%" />
 </center>
 <!--  Thumbnails   -->
+
 <ul class="thumbnails">
     {foreach from=$list_journal key=k item=l}
     <li class="span4" style="margin-left: 10px;">
