@@ -10,11 +10,22 @@
     .accordion-heading:active{
         text-decoration: none;
     }
-    a:link{
+    .accordion-toggle{
         color: white;
     }
-    a:link:hover{
+    .accordion-toggle:hover{
         text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    .accordion-toggle:active{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    .accordion-toggle:focus{
+        text-decoration: none;
+        color: white;
         font-weight: bold;
     }
     .accordion-inner{
