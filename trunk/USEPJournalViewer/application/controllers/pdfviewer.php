@@ -15,13 +15,8 @@ class pdfviewer extends CI_Controller{
         parent::__construct();
         
         $this->load->model('Journal_model', '', TRUE);
-        $this->load->library('session');
         $this->template_engine->assign('title', 'Journals - PDFviewer');
-        
-        
-        //var_dump($this->session->userdata('deptID'));
-        //$this->full_length  = $this->Journal_model->get_journals('Full Length');
-        //$this->conpendium   = $this->Journal_model->get_journals('Conpendum');
+       
     }
     
     public function index() {}
