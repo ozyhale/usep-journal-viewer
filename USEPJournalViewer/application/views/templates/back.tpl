@@ -20,7 +20,7 @@
                height: 102px; 
                background-repeat: no-repeat;
                background-position: center center;
-               background-size: 1020px 100%;
+               background-size: 100% 100%;
            }
            #back_body{
                margin-top: 5px;
@@ -40,7 +40,7 @@
                height: 50px; 
                background-repeat: no-repeat;
                background-position: center center;
-               background-size: 1020px 100%;
+               background-size: 100% 100%;
                box-shadow: 7px 7px 5px rgb(34,0,10);
            }
            .b_side{
