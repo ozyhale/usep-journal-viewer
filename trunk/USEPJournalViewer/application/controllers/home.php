@@ -42,7 +42,7 @@ class Home extends CI_Controller {
         $type           = str_replace('-', ' ', $this->session->userdata('journal_type'));
         $query_journals = $this->Journal_model->get_journals($t_deptID, $type);
         
-        $this->template_engine->assign('file_content', 'thumbnails_journals.tpl');
+        $this->template_engine->assign('body_content', 'thumbnails_journals.tpl');
         $this->template_engine->assign('set_navActive', '2');
         $this->template_engine->assign('list_journal', $query_journals);
         $this->template_engine->assign('dept_name', $this->getDeptName($t_deptID));
@@ -55,7 +55,7 @@ class Home extends CI_Controller {
         $type           = str_replace('-', ' ', $t_type);
         $query_journals = $this->Journal_model->get_journals($this->session->userdata('deptID'), $type); 
         
-        $this->template_engine->assign('file_content', 'thumbnails_journals.tpl');
+        $this->template_engine->assign('body_content', 'thumbnails_journals.tpl');
         $this->template_engine->assign('set_navActive', '3');
         $this->template_engine->assign('list_journal', $query_journals); 
         $this->template_engine->assign('dept_name', $this->getDeptName($this->session->userdata('deptID')));
@@ -63,6 +63,20 @@ class Home extends CI_Controller {
         $this->template_engine->assign('_deptID', $this->session->userdata('deptID'));
     }
 
+    public function choose_journal_dept($t_deptID, $t_type){
+         $this->session->set_userdata('deptID', $t_deptID);
+        $this->session->set_userdata('journal_type', $t_type);
+        $type           = str_replace('-', ' ', $t_type);
+        $query_journals = $this->Journal_model->get_journals($t_deptID, $type); 
+        
+        $this->template_engine->assign('body_content', 'thumbnails_journals.tpl');
+        $this->template_engine->assign('set_navActive', '3');
+        $this->template_engine->assign('list_journal', $query_journals); 
+        $this->template_engine->assign('dept_name', $this->getDeptName($this->session->userdata('deptID')));
+        $this->template_engine->assign('journal_type', $type);
+        $this->template_engine->assign('_deptID', $this->session->userdata('deptID'));
+    }
+    
     public function _output() {
         $this->template_engine->assign('header', 'front_header.tpl');
         $this->template_engine->assign('content', 'front_home.tpl');
