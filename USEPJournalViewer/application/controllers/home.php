@@ -21,7 +21,7 @@ class Home extends CI_Controller {
         $this->template_engine->assign('title', 'Home - ' . $this->site_name);
         $this->template_engine->assign('footer', 'footer.tpl');
         $this->template_engine->assign('file_content', 'home.tpl'); 
-        $this->template_engine->assign('set_navActive', '1');
+        $this->template_engine->assign('set_navActive', '0');
         
           
 //        if(!$this->session->userdata('journal_type') && !$this->session->userdata('deptID')){
@@ -36,7 +36,7 @@ class Home extends CI_Controller {
     public function index() {}
 
     public function home(){
-        $this->template_engine->assign('set_navActive', '1');
+        $this->template_engine->assign('set_navActive', '0');
         $this->template_engine->assign('this_home', '1');   
     }
     
@@ -68,19 +68,22 @@ class Home extends CI_Controller {
     }
     */
 
-    public function choose_journal_dept($t_deptID, $t_type){
+    public function choose_journal_dept($t_deptID, $t_type, $_active){
         //$this->session->set_userdata('deptID', $t_deptID);
         //$this->session->set_userdata('journal_type', $t_type);
         $type           = str_replace('-', ' ', $t_type);
         $query_journals = $this->Journal_model->get_journals($t_deptID, $type); 
         
         $this->template_engine->assign('body_content', 'thumbnails_journals.tpl');
-        $this->template_engine->assign('set_navActive', '3');
+        //$this->template_engine->assign('set_navActive', '3');
         $this->template_engine->assign('list_journal', $query_journals); 
         $this->template_engine->assign('dept_name', $this->getDeptName($t_deptID));
         $this->template_engine->assign('journal_type', $type);
         $this->template_engine->assign('_deptID', $t_deptID);
         $this->template_engine->assign('_type', $t_type);
+        
+        if($_active == 1){$this->template_engine->assign('set_navActive', '1');}
+        if($_active == 2){$this->template_engine->assign('set_navActive', '2');}
     }
     
     public function _output() {
