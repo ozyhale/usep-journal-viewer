@@ -176,6 +176,7 @@
                 margin-left: 10px;
                 margin-bottom: 5px;
                 opacity: 0.8;
+                width: 800px;
             }
 
             #f_title{
