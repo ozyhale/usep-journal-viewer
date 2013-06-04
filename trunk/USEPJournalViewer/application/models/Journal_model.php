@@ -38,7 +38,21 @@ class Journal_model extends CI_Model{
         $query = $this->db->get_where('journals', array('dept_id' => $t_deptID, 'type' => $t_type));
         
         return $query->result_array();
-    } 
+    }
+    
+    public function get_num_journals($t_deptID, $t_type){
+        $num = $this->db->get_where('journals', array('dept_id' => $t_deptID, 'type' => $t_type));
+        return $num->num_rows();
+    }
+    
+    public function get_journals_query($t_deptID, $t_type, $page = 1){
+        
+        $offset = ($page - 1) * 6;
+        
+        $query = $this->db->get_where('journals', array('dept_id' => $t_deptID, 'type' => $t_type), 6, $offset);
+        
+        return $query;
+    }
     
     public function delete($t_journalID){
         $this->db->delete('journals', array('id' => $t_journalID)); 

@@ -15,6 +15,9 @@
     </ul>
     </div>
 -->
+
+{$pagination}
+
 </center>
 <!--  Thumbnails   -->
 
