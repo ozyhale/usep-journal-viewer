@@ -66,7 +66,8 @@ class Journal_model extends CI_Model{
                 'volume' => $this->input->post('vol_number'),
                 'ISSN' => $this->input->post('issn'),
                 'cover_page' => $t_coverpage_path,
-                'journal_file' => $t_pdffile_path
+                'journal_file' => $t_pdffile_path,
+                'course_name' => $this->input->post('course')
                 );
        
         $this->db->set('date_released', 'CURDATE()', FALSE); 
@@ -76,6 +77,7 @@ class Journal_model extends CI_Model{
     public function update($key, $t_cover_img, $t_pdf_file){
         $data = array(
                 'Title' => $this->input->post('title') ,
+                'course_name' => $this->input->post('course') ,
                 'type' => $this->input->post('type') ,
                 'volume' => $this->input->post('vol_number'),
                 'ISSN' => $this->input->post('issn'),

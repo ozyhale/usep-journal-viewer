@@ -20,6 +20,18 @@
                     <input type="text" name="title" placeholder="Journal Name..." required>
                 </div>
             </div>
+            
+            <div class="control-group">
+                <label class="control-label">Course:</label>
+                <div class="controls">
+                    <select name="course" required>
+                        {foreach from=$course_list key=k item=i}
+                            <option>{$course_list[$k]['course_name']}</option>
+                        {/foreach}    
+                    </select>
+                </div>
+            </div>
+            
             <div class="control-group">
                 <label class="control-label">Journal Type:</label>
                 <div class="controls">

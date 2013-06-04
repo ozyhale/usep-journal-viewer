@@ -15,6 +15,7 @@ class Journals extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('Journal_model', '', TRUE);
+        $this->load->model('course_model', '', TRUE);
         $this->load->library('session');
         $this->load->library('form_validation');
         
@@ -105,9 +106,10 @@ class Journals extends CI_Controller {
         }else{
             $this->template_engine->assign('pre_editJournal', 'value');
             $this->template_engine->assign('pre_jtitle', $query_journal[0]['Title']);
+            $this->template_engine->assign('pre_jcourse', $query_journal[0]['course_name']);
             $this->template_engine->assign('pre_jtype', $query_journal[0]['type']);
             $this->template_engine->assign('pre_jvolume', $query_journal[0]['volume']);
-            $this->template_engine->assign('pre_jissn', $query_journal[0]['ISSN']);
+            $this->template_engine->assign('pre_jissn', $query_journal[0]['ISSN']);  
         }
     }
     
@@ -201,12 +203,14 @@ class Journals extends CI_Controller {
         if ($this->session->userdata('username') == '') {
             $this->template_engine->display('login.tpl');
         } else {
-            $firstname = $this->session->userdata('firstname');
-            $middlename = $this->session->userdata('middle_initial');
-            $lastname = $this->session->userdata('lastname');
+            $firstname      = $this->session->userdata('firstname');
+            $middlename     = $this->session->userdata('middle_initial');
+            $lastname       = $this->session->userdata('lastname');
             $email          = $this->session->userdata('email');
             $account_type   = $this->session->userdata('account_type');
-            $query          = $this->Journal_model->query_journals($this->session->userdata('dept_id'));
+            $query_journal  = $this->Journal_model->query_journals($this->session->userdata('dept_id'));
+            $query_courses  = $this->course_model->get_courseByDept($this->session->userdata('dept_id'));
+            
             
             $this->template_engine->assign('firstname', $firstname);
             $this->template_engine->assign('middlename', $middlename);
@@ -217,11 +221,9 @@ class Journals extends CI_Controller {
             $this->template_engine->assign('sidebar', 'back_sidebar.tpl');
             $this->template_engine->assign('content', 'back_journals.tpl');
             $this->template_engine->assign('active_menu_item', 'Journals');
-            $this->template_engine->assign('journals', $query);
+            $this->template_engine->assign('journals', $query_journal);
             $this->template_engine->assign('dept_name', $this->getDeptname($this->session->userdata('dept_id')));
-            
-            
-            
+            $this->template_engine->assign('course_list', $query_courses);
 
             $this->template_engine->display('back.tpl');
         }

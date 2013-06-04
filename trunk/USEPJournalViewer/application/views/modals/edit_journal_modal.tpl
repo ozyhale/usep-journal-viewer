@@ -14,13 +14,24 @@
                     <input type="text" name="title" value="{$pre_jtitle}" required>
                 </div>
             </div>
+              
+            <div class="control-group">
+                <label class="control-label">Course:</label>
+                <div class="controls">
+                    <select name="course" required>
+                        {foreach from=$course_list key=k item=i}
+                            {if $pre_jcourse eq $course_list[$k]['course_name']} <option selected>{$course_list[$k]['course_name']}</option>  {else} <option>{$course_list[$k]['course_name']}</option> {/if}
+                        {/foreach}    
+                    </select>
+                </div>
+            </div>    
                 
             <div class="control-group">
                 <label class="control-label">Journal Type:</label>
                 <div class="controls">
                     <select name="type" required>
-                        <option {if $pre_jtype eq "Full Length"} seleted {/if}>Full Length</option>
-                        <option {if $pre_jtype eq "Conpendum"} seleted {/if}>Compendium</option>
+                    {if $pre_jtype eq "Full Length"} <option selected >Full Length</option> {else}  <option>Full Length</option> {/if}
+                    {if $pre_jtype eq "Compendium"} <option selected >Compendium</option> {else}  <option>Compendium</option> {/if}
                     </select>
                 </div>
             </div>
