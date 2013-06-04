@@ -9,14 +9,17 @@
     }
     .accordion-heading:active{
         text-decoration: none;
+        font-size: 12pt;
     }
     .accordion-toggle{
         color: white;
+        font-size: 12pt;
     }
     .accordion-toggle:hover{
         text-decoration: none;
         color: white;
         font-weight: bold;
+        font-size: 12pt;
     }
     .accordion-toggle:active{
         text-decoration: none;
@@ -27,10 +30,24 @@
         text-decoration: none;
         color: white;
         font-weight: bold;
+        font-size: 13pt;
     }
     .accordion-inner{
         background: white;
         border: 1px solid #000000;
+    }
+    #acc_link{
+        color: black;
+        font-size: 11pt;
+    }
+    #acc_link:hover{
+        color: black;
+        font-size: 11pt;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .f_page{
+        margin-left: 25%;
     }
 </style>
 
@@ -43,8 +60,8 @@
                 </a>
             </div>
             <div id="collapse1" class="accordion-body collapse">
-                <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/1/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/1/Full-Length/0">Full Length Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/1/Compendium/0">Compendium Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/1/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
         <div class="accordion-group">
@@ -54,19 +71,19 @@
                 </a>
             </div>
             <div id="collapse2" class="accordion-body collapse">
-                 <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/2/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/2/Full-Length/0">Full Length Journals</a></div>
+                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/2/Compendium/0">Compendium Journals</a></div>
+                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/2/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
         <div class="accordion-group">
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse3">
-                    College of Governance Business and Economics
+                    College of Governance and Business
                 </a>
             </div>
             <div id="collapse3" class="accordion-body collapse">
-                 <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/3/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/3/Full-Length/0">Full Length Journals</a></div>
+                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/3/Compendium/0">Compendium Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/3/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
         <div class="accordion-group">
@@ -76,8 +93,8 @@
                 </a>
             </div>
             <div id="collapse4" class="accordion-body collapse">
-                 <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/4/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/4/Full-Length/0">Full Length Journals</a></div>
+                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/4/Compendium/0">Compendium Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/4/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
         <div class="accordion-group">
@@ -87,8 +104,8 @@
                 </a>
             </div>
             <div id="collapse5" class="accordion-body collapse">
-                 <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/5/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/5/Full-Length/0">Full Length Journals</a></div>
+                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/5/Compendium/0">Compendium Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/5/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
         <div class="accordion-group">
@@ -98,8 +115,8 @@
                 </a>
             </div>
             <div id="collapse6" class="accordion-body collapse">
-                 <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/6/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/6/Full-Length/0">Full Length Journals</a></div>
+                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/6/Compendium/0">Compendium Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/6/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
         <div class="accordion-group">
@@ -109,8 +126,8 @@
                 </a>
             </div>
             <div id="collapse7" class="accordion-body collapse">
-                 <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/7/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a href="{$site_url}home/choose_journal_dept/7/Full-Length/0">Full Length Journals</a></div>
+                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/7/Compendium/0">Compendium Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/7/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
     </div>

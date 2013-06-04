@@ -2,6 +2,17 @@
 {*$list_journal[0]['cover_page']|@var_dump*}
 <center>
 <hr width="90%" />
+<div class="pagination f_page">
+    <ul>
+    <li><a href="#">Prev</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Next</a></li>
+    </ul>
+    </div>
 </center>
 <!--  Thumbnails   -->
 

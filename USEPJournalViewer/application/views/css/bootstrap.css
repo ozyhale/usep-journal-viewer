@@ -4971,7 +4971,8 @@ input[type="submit"].btn.btn-mini {
 }
 
 .pagination ul {
-  display: inline-block;
+  /*display: inline-block;*/
+  display: block;
   *display: inline;
   margin-bottom: 0;
   margin-left: 0;
