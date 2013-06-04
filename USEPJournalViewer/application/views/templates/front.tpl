@@ -209,9 +209,9 @@
                 background: -moz-linear-gradient(top, #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%);
                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d0e4f7), color-stop(24%, #73b1e7), color-stop(79%, #0a77d5), color-stop(100%, #87bcea));
                 background: -o-linear-gradient(top, #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%);
-                -moz-transform: scale(0.95) rotate(-2deg);
-                -webkit-tranform: scale(0.95) rotate(-2deg);
-                -o-tranform: scale(0.95) rotate(-2deg);
+                -moz-transform: scale(0.94) rotate(-2deg);
+                -webkit-tranform: scale(0.94) rotate(-2deg);
+                -o-tranform: scale(0.94) rotate(-2deg);
             }
 
             .f_footer{
