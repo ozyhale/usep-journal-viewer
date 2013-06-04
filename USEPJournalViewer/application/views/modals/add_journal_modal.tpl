@@ -34,7 +34,7 @@
             <div class="control-group">
                 <label class="control-label">Volume Number:</label>
                 <div class="controls">
-                    <input type="text" name="vol_number" placeholder="Enter Volume Number..." required pattern="[0-9]{1,5}">
+                    <input type="text" name="vol_number" placeholder="Enter Volume Number..." required pattern="^[1-9]\d*(\.\d+)?$">
                 </div>
             </div>
             
