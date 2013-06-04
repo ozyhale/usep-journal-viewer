@@ -249,7 +249,6 @@
                 </div>
             </div>
         </div>
-                
     <!-- ----------------- js ----------------------- -->
     <script>window.jQuery || document.write('<script src="{$base_url}application/views/js/vendor/jquery-1.9.1.js"><\/script>');</script>
     <script src="{$base_url}application/views/js/vendor/bootstrap.js"></script>
