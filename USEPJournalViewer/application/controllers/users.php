@@ -15,7 +15,7 @@ class Users extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('user_model', '', TRUE);
-        
+        $this->load->model('course_model', '', TRUE);
         $this->site_name = $this->config->item('site_name');
         
 
@@ -109,7 +109,8 @@ class Users extends CI_Controller {
             $lastname       = $this->session->userdata('lastname');
             $email          = $this->session->userdata('email');
             $account_type   = $this->session->userdata('account_type');
-            $query          = $this->user_model->query_users();
+            $query_users    = $this->user_model->query_users();
+            $query_courses  = $this->course_model->get_courseByDept($this->session->userdata('dept_id'));
 
             $this->template_engine->assign('firstname', $firstname);
             $this->template_engine->assign('middlename', $middlename);
@@ -120,8 +121,9 @@ class Users extends CI_Controller {
             $this->template_engine->assign('sidebar', 'back_sidebar.tpl');
             $this->template_engine->assign('content', 'back_users.tpl');
             $this->template_engine->assign('active_menu_item', 'Users');
-            $this->template_engine->assign('name', $query);
+            $this->template_engine->assign('name', $query_users);
             $this->template_engine->assign('dept_name', $this->getlist_DeptName());
+            $this->template_engine->assign('course_list', $query_courses);
 //            $this->template_engine->assign('email', $this->user_model->query_users());
             //$this->user_model->
             //$query = $this->user_model->query_users();

@@ -12,7 +12,7 @@ class Administrator extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-
+        $this->load->model('course_model', '', TRUE);
         $this->config->set_item('index_page', 'index.php/');
         
         $this->site_name = $this->config->item('site_name');
@@ -80,12 +80,14 @@ class Administrator extends CI_Controller {
             $lastname       = $this->session->userdata('lastname');
             $email          = $this->session->userdata('email');
             $account_type   = $this->session->userdata('account_type');
+            $query_courses  = $this->course_model->get_courseByDept($this->session->userdata('dept_id'));
             
             $this->template_engine->assign('firstname', $firstname);
             $this->template_engine->assign('middlename', $middlename);
             $this->template_engine->assign('lastname', $lastname);
             $this->template_engine->assign('email', $email);
             $this->template_engine->assign('account_type', $account_type);
+            $this->template_engine->assign('course_list', $query_courses);
             
             $this->template_engine->assign('header', 'back_header.tpl');
             $this->template_engine->assign('sidebar', 'back_sidebar.tpl');
