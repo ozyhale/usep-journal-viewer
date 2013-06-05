@@ -35,21 +35,21 @@
                     </select>
                 </div>
             </div>
-
+                   
             <div class="control-group">
                 <label class="control-label">Volume Number:</label>
                 <div class="controls">
-                    <input type="text" name="vol_number" value="{$pre_jvolume}" required>
+                    <input type="text" name="vol_number" value="{$pre_jvolume}" required {literal}  pattern="^[1-9]\d*(\.\d+)?$" {/literal} >
                 </div>
             </div>
                 
             <div class="control-group">
                 <label class="control-label">ISSN:</label>
                 <div class="controls">
-                    <input type="text" name="issn" value="{$pre_jissn}" required>
+                    <input type="text" name="issn" value="{$pre_jissn}" required {literal} pattern="[0-9]{1,5}-[0-9]{1,5}" {/literal}>
                 </div>
-            </div>
-                
+            </div>      
+            
             <legend>Upload Cover Page Option</legend>
                 
             <div class="control-group">
