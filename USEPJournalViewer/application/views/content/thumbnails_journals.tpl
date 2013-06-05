@@ -16,7 +16,7 @@
     </div>
 -->
 
-{$pagination}
+
 
 </center>
 <!--  Thumbnails   -->
@@ -27,13 +27,13 @@
         <div class="thumbnail f_thumb">
             <center><img style="cursor: pointer;" data-src="holder.js/160x120" alt="" src="{$base_url}{$list_journal[$k]['cover_page']}" onclick="_target('{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}/{$_deptID}')"></center>
             <div class="caption">
-                <h3 style="font-size: 14pt;">{$list_journal[$k]['Title']}</h3>
+                <h3 style="font-size: 12pt;">{$list_journal[$k]['Title']}</h3>
                 <p>
                     <ul>
-                        <li><strong>Course:</strong> {$list_journal[$k]['course_name']}</li>
-                        <li><strong>Volume:</strong> {$list_journal[$k]['volume']}</li>
-                        <li><strong>ISSN:</strong> {$list_journal[$k]['ISSN']}</li>
-                        <li><strong>Date Released:</strong> {$list_journal[$k]['date_released']}</li>
+                        <li style="font-size: 9pt;"><strong>Course:</strong> {$list_journal[$k]['course_name']}</li>
+                        <li style="font-size: 9pt;"><strong>Volume:</strong> {$list_journal[$k]['volume']}</li>
+                        <li style="font-size: 9pt;"><strong>ISSN:</strong> {$list_journal[$k]['ISSN']}</li>
+                        <li style="font-size: 9pt;"><strong>Date Released:</strong> {$list_journal[$k]['date_released']}</li>
                     </ul>
                 </p>
             </div>
@@ -41,3 +41,5 @@
     </li>
     {/foreach}
 </ul>
+
+{$pagination}
