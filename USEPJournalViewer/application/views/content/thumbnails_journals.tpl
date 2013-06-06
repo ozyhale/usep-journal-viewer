@@ -25,7 +25,7 @@
     {foreach from=$list_journal key=k item=l}
     <li class="span4" style="margin-left: 10px;">
         <div class="thumbnail f_thumb" style="height: 450px;">
-            <center><img style="cursor: pointer;" data-src="holder.js/160x120" alt="" src="{$base_url}{$list_journal[$k]['cover_page']}" onclick="_target('{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}/{$_deptID}')"></center>
+            <center><img style="cursor: pointer; border: none;" data-src="holder.js/160x120" alt="" src="{$base_url}{$list_journal[$k]['cover_page']}" onclick="_target('{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}/{$_deptID}')"></center>
             <div class="caption">
                 <p style="font-size: 10pt; font-weight: bold;">{$list_journal[$k]['Title']}</p>
                 <p>
