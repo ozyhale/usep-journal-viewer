@@ -222,11 +222,7 @@
             
             .f_body{
                 min-height: 600px;
-                {if isset($list_journal[0]['Title'])}
-                    background: #F9FAFB url('{$base_url}application/views/img/bg.png') scroll no-repeat;
-                {else}
-                    background: #F9FAFB url('{$base_url}application/views/img/bg2.png') scroll no-repeat;
-                {/if}
+                background: #F9FAFB url('{$base_url}application/views/img/bg.png') scroll no-repeat;
                 background-position:center center;
             }
             
