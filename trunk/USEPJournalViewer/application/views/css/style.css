@@ -236,6 +236,7 @@ ul.art-vmenu a
    font-family: 'Trebuchet MS', Arial, Helvetica, Sans-Serif;
 }
 
+/*--------*/
 header, footer, article, nav, #art-hmenu-bg, .art-sheet, .art-hmenu a, .art-vmenu a, .art-slidenavigator > a, .art-checkbox:before, .art-radiobutton:before
 {
    -webkit-background-origin: border !important;
@@ -243,6 +244,7 @@ header, footer, article, nav, #art-hmenu-bg, .art-sheet, .art-hmenu a, .art-vmen
    background-origin: border-box !important;
 }
 
+/*--------*/
 header, footer, article, nav, #art-hmenu-bg, .art-sheet, .art-slidenavigator > a, .art-checkbox:before, .art-radiobutton:before
 {
    display: block;
@@ -251,14 +253,15 @@ header, footer, article, nav, #art-hmenu-bg, .art-sheet, .art-slidenavigator > a
    box-sizing: border-box;
 }
 
-ul
+/*ul
 {
    list-style-type: none;
 }
-
+*/
 ol
 {
    list-style-position: inside;
+   list-style-type: none;
 }
 
 html, body
@@ -274,12 +277,14 @@ body
    color: #000000;
 }
 
+/*------------*/
 .art-header:before, #art-header-bg:before, .art-layout-cell:before, .art-layout-wrapper:before, .art-footer:before, .art-nav:before, #art-hmenu-bg:before, .art-sheet:before
 {
    width: 100%;
    content: " ";
    display: table;
 }
+/*------------*/
 .art-header:after, #art-header-bg:after, .art-layout-cell:after, .art-layout-wrapper:after, .art-footer:after, .art-nav:after, #art-hmenu-bg:after, .art-sheet:after,
 .cleared, .clearfix:after {
    clear: both;
@@ -366,7 +371,7 @@ li p, .art-postcontent li p, .art-blockcontent li p
 
 
 
-
+/*----------*/
 .art-sheet
 {
    background: #FFFFFF;
@@ -381,6 +386,7 @@ li p, .art-postcontent li p, .art-blockcontent li p
    z-index: auto !important;
 }
 
+/*---------*/
 .art-header>.widget 
 {
    position:absolute;
@@ -655,6 +661,7 @@ ul.art-hmenu ul li a:hover, .desktop ul.art-hmenu ul li:hover>a
    color: #000000;
 }
 
+/*
 ul.art-hmenu ul:before
 {
    background: #EFF2F5;
@@ -664,6 +671,8 @@ ul.art-hmenu ul:before
    content: ' ';
    z-index: 1;
 }
+*/
+
 .desktop ul.art-hmenu li:hover>ul {
    visibility: visible;
    top: 100%;

@@ -14,7 +14,8 @@
         <link rel="stylesheet" href="{$base_url}application/views/css/main.css">
         <link rel="stylesheet" href="{$base_url}application/views/content/imageflow.packed.css" type="text/css" />
         <link rel="stylesheet" href="{$base_url}application/views/dataTables/DT_bootstrap.css">
-
+        
+        
         <link rel="stylesheet" href="{$base_url}application/views/css/style.css" media="screen">
         <link rel="stylesheet" href="{$base_url}application/views/css/style.responsive.css" media="all">
         <link rel="shortcut icon" href="{$base_url}application/views/img/favicon.ico" type="image/x-icon">
