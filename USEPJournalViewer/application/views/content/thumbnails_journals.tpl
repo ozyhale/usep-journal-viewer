@@ -21,7 +21,7 @@
 </center>
 <!--  Thumbnails   -->
 
-<ul class="thumbnails">
+<ol class="thumbnails">
     {foreach from=$list_journal key=k item=l}
     <li class="span4" style="margin-left: 10px;">
         <div class="thumbnail f_thumb" style="height: 450px;">
@@ -29,17 +29,17 @@
             <div class="caption">
                 <p style="font-size: 10pt; font-weight: bold;">{$list_journal[$k]['Title']}</p>
                 <p>
-                    <ul>
+                    <ol>
                         <li style="font-size: 9pt;"><strong>Course:</strong> {$list_journal[$k]['course_name']}</li>
                         <li style="font-size: 9pt;"><strong>Volume:</strong> {$list_journal[$k]['volume']}</li>
                         <li style="font-size: 9pt;"><strong>ISSN:</strong> {$list_journal[$k]['ISSN']}</li>
                         <li style="font-size: 9pt;"><strong>Date Released:</strong> {$list_journal[$k]['date_released']}</li>
-                    </ul>
+                    </ol>
                 </p>
             </div>
         </div>
     </li>
     {/foreach}
-</ul>
+</ol>
 
 {$pagination}
