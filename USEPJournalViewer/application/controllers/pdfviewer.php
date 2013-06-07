@@ -21,6 +21,7 @@ class pdfviewer extends CI_Controller{
     
     public function index() {}
     
+    /*
     public function view_list($t_type, $_deptID){
         $t_type = str_replace('-', ' ', $t_type);
         $query_type = $this->Journal_model->get_journals($_deptID, $t_type);
@@ -30,6 +31,7 @@ class pdfviewer extends CI_Controller{
         $this->template_engine->assign('_deptID', $_deptID); 
         $this->template_engine->assign('_deptNAME', $this->getDeptName($_deptID)); 
     }
+     */
     
     public function view_pdf($t_journalID, $_deptID){
         $query_journal = $this->Journal_model->get_journals_info($t_journalID);
