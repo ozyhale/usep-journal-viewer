@@ -87,9 +87,9 @@
         
          <div class="container" id="header"> </div>
         <div class="container socs-content pdf_container" >
-            <div class="navbar">
+            <div class="navbar navbar-inverse">
                 <div class="navbar-inner pdf_nav">
-                    <ul class="nav">
+                    {*<ul class="nav">
                         <li class="active"><a href="">Home</a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="">Journal Type<b class="caret"></b></a>
@@ -100,6 +100,7 @@
                         </li>
                         <li><a  href=""> About Us </a></li> 
                     </ul>
+                    *}
                 </div>
             </div>
 
@@ -114,7 +115,7 @@
 
             <div style="border: 1px solid; box-shadow: 10px 10px 5px #888888; margin-top: -15px; border-top-left-radius: 5px; border-top-right-radius: 5px;">
 
-                <div style="margin-top: -10px;" id="iframe"><center><h4 style="font-family: georgia; padding-top: 3px; padding-bottom: 3px;">{$_deptNAME} - {if isset($journal_title)} {$journal_title} {else} Choose PDF File {/if}</h4></center></div>
+                <div style="margin-top: -10px;" id="iframe"><center><h4 style="font-family: georgia; padding-top: 3px; padding-bottom: 3px;">{$_deptNAME} - ({if isset($journal_title)} {$journal_title}) {else} Choose PDF File {/if}</h4></center></div>
                 <applet code="EmbedPDF.class" archive="{$base_url}application/views/applet/fontsseparate/EmbedPDF.jar" style="width: 100%; height: 620px;">
 
                     <!-- Use the following parameters to configure Embed PDF: -->

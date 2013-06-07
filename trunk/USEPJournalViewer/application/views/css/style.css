@@ -2134,7 +2134,7 @@ pre
 
 .art-postcontent ul>li:before,  .art-post ul>li:before,  .art-textblock ul>li:before
 {
-   content:url('images/postbullets.png');
+   /*content:url('images/postbullets.png');*/
    margin-right:6px;
    bottom: 2px;
    position:relative;
