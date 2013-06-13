@@ -29,24 +29,11 @@
     </div>
 {/if}
 
-
 <ol class="thumbnails">
     {foreach from=$list_journal key=k item=l}
         <li class="span4" style="margin-left: 10px;">
-            <div class="thumbnail f_thumb" style="height: 250px;">
+            <div class="thumbnail f_thumb" style="height: 160px;">
                 <center><img style="cursor: pointer; border: none; max-height: 150px; width: 200px;" data-src="holder.js/160x120" alt="" src="{$base_url}{$list_journal[$k]['cover_page']}" onclick="_target('{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}/{$_deptID}')"></center>
-                <div class="caption">
-                    <p style="font-size: 10pt; font-weight: bold;">{$list_journal[$k]['Title']}</p>
-                    <p>
-                    {*
-                    <ol>
-                        <li style="font-size: 7pt;"><strong>Course:</strong> {$list_journal[$k]['course_name']}</li>
-                        <li style="font-size: 7pt;"><strong>Volume:</strong> {$list_journal[$k]['volume']}</li>
-                        <li style="font-size: 7pt;"><strong>ISSN:</strong> {$list_journal[$k]['ISSN']}</li>
-                        <li style="font-size: 7pt;"><strong>Date Released:</strong> {$list_journal[$k]['date_released']}</li>
-                    </ol>*}
-                    </p>
-                </div>
             </div>
         </li>
     {/foreach}
