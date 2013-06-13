@@ -46,6 +46,7 @@
                 overflow:hidden;
             }
             
+            {*
             #art-header-bg{
                 position: absolute;
                 overflow:hidden;
@@ -55,16 +56,19 @@
                 height: 170px;
                 z-index: auto;
                 background-position: center top;
-                background-image: url('{$base_url}application/views/img/images/header.jpg');
+                background-image: url('{$base_url}application/views/img/images/journalheader.png');
                 background-repeat: no-repeat;
+                background-size: 100% 100%;
             }
+            *}
             
             .art-header{
                 margin:0 auto;
                 height: 170px;
-                background-image: url('{$base_url}application/views/img/images/header.jpg');
+                background-image: url('{$base_url}application/views/img/images/journalheader.png');
                 background-position: center top;
                 background-repeat: no-repeat;
+                background-size: 100% 100%;
                 position: relative;
                 z-index: auto !important;
             }
@@ -177,7 +181,7 @@
                 margin-left: 10px;
                 margin-bottom: 5px;
                 opacity: 0.8;
-                width: 800px;
+                width: 82%;
             }
 
             #f_title{
@@ -223,7 +227,7 @@
             .f_body{
                 min-height: 600px;
                 background: #F9FAFB url('{$base_url}application/views/img/bg.png') scroll no-repeat;
-                background-position:center center;
+                background-position:left center;
             }
             
         </style>

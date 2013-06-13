@@ -1,25 +1,28 @@
 <style>
     .accordion-heading{
-        background: -moz-linear-gradient(top, rgba(19,19,19,1) 0%, rgba(44,44,44,1) 10%, rgba(102,102,102,1) 66%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(19,19,19,1)), color-stop(10%,rgba(44,44,44,1)), color-stop(66%,rgba(102,102,102,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(44,44,44,1) 10%,rgba(102,102,102,1) 66%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(44,44,44,1) 10%,rgba(102,102,102,1) 66%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(44,44,44,1) 10%,rgba(102,102,102,1) 66%); /* IE10+ */
-        background: linear-gradient(to bottom, rgba(19,19,19,1) 0%,rgba(44,44,44,1) 10%,rgba(102,102,102,1) 66%); /* W3C */
+        background: -moz-linear-gradient(top, rgba(19,19,19,1) 0%, rgba(44,44,44,1) 10%, rgba(102,102,102,1) 66%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(19,19,19,1)), color-stop(10%,rgba(44,44,44,1)), color-stop(66%,rgba(102,102,102,1)));
+        background: -webkit-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(44,44,44,1) 10%,rgba(102,102,102,1) 66%);
+        background: -o-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(44,44,44,1) 10%,rgba(102,102,102,1) 66%);
+        background: -ms-linear-gradient(top, rgba(19,19,19,1) 0%,rgba(44,44,44,1) 10%,rgba(102,102,102,1) 66%);
+        background: linear-gradient(to bottom, rgba(19,19,19,1) 0%,rgba(44,44,44,1) 10%,rgba(102,102,102,1) 66%);
+        border-radius: 5px 5px 0px 0px;
     }
     .accordion-heading:active{
         text-decoration: none;
-        font-size: 12pt;
     }
     .accordion-toggle{
         color: white;
-        font-size: 12pt;
+        font-size: 9pt;
+        padding-left: 1px;
+        padding-right: 1px;
+        margin-left: -10px;
     }
     .accordion-toggle:hover{
         text-decoration: none;
         color: white;
         font-weight: bold;
-        font-size: 12pt;
+        font-size: 9pt;
     }
     .accordion-toggle:active{
         text-decoration: none;
@@ -30,24 +33,28 @@
         text-decoration: none;
         color: white;
         font-weight: bold;
-        font-size: 13pt;
+        font-size: 9pt;
     }
     .accordion-inner{
         background: white;
         border: 1px solid #000000;
     }
     #acc_link{
+        width: 100%;
         color: black;
-        font-size: 11pt;
+        font-size: 9pt;
     }
     #acc_link:hover{
         color: black;
-        font-size: 11pt;
+        font-size: 9pt;
         text-decoration: none;
         font-weight: bold;
     }
     .f_page{
         margin-left: 25%;
+    }
+    .f_cont{
+       padding-left: 5px;
     }
 </style>
 
@@ -131,7 +138,7 @@
             </div>
         </div>
     </div>
-    <div class="span9">
+    <div class="span9 f_cont">
         {if isset($body_content)}
             {include file=$body_content}
         {else}
