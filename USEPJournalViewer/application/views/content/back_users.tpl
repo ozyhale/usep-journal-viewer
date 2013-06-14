@@ -15,7 +15,7 @@
                 <td style="max-width: 200px">{$dept_name[$name[$k]['dept_id']]}</td>
                 <td>
                     <center>
-                        <button class="btn btn-success" onclick="window.location.href='{$site_url}users/change_pass/{$name[$k]['username']}'"><i class="icon-wrench icon-white"></i></button>
+                        <button style="min-height: 20px; min-width: 20px; " class="btn btn-success" onclick="window.location.href='{$site_url}users/change_pass/{$name[$k]['username']}'"><i class="icon-wrench icon-white"></i></button>
                         <button class="btn btn-danger" onclick="onclick_delete_users('{$name[$k]['id']}','{$name[$k]['lastname']}','{$name[$k]['firstname']}','{$name[$k]['middle_initial']}')"><i class="icon-remove icon-white"></i></button>
                     </center>
                 </td>
