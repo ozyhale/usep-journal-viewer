@@ -54,7 +54,7 @@
         margin-left: 25%;
     }
     .f_cont{
-       padding-left: 5px;
+        padding-left: 5px;
     }
 </style>
 
@@ -78,8 +78,8 @@
                 </a>
             </div>
             <div id="collapse2" class="accordion-body collapse">
-                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/2/Compendium/0">Compendium Journals</a></div>
-                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/2/Full-Length/0">Full Length Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/2/Compendium/0">Compendium Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/2/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
         <div class="accordion-group">
@@ -89,7 +89,7 @@
                 </a>
             </div>
             <div id="collapse3" class="accordion-body collapse">
-                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/3/Compendium/0">Compendium Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/3/Compendium/0">Compendium Journals</a></div>
                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/3/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
@@ -100,7 +100,7 @@
                 </a>
             </div>
             <div id="collapse4" class="accordion-body collapse">
-                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/4/Compendium/0">Compendium Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/4/Compendium/0">Compendium Journals</a></div>
                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/4/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
@@ -111,7 +111,7 @@
                 </a>
             </div>
             <div id="collapse5" class="accordion-body collapse">
-                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/5/Compendium/0">Compendium Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/5/Compendium/0">Compendium Journals</a></div>
                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/5/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
@@ -122,7 +122,7 @@
                 </a>
             </div>
             <div id="collapse6" class="accordion-body collapse">
-                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/6/Compendium/0">Compendium Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/6/Compendium/0">Compendium Journals</a></div>
                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/6/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
@@ -133,7 +133,7 @@
                 </a>
             </div>
             <div id="collapse7" class="accordion-body collapse">
-                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/7/Compendium/0">Compendium Journals</a></div>
+                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/7/Compendium/0">Compendium Journals</a></div>
                 <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/7/Full-Length/0">Full Length Journals</a></div>
             </div>
         </div>
@@ -142,6 +142,7 @@
         {if isset($body_content)}
             {include file=$body_content}
         {else}
+            
             <div class="hero-unit f_hero">
                 <h1>Welcome...</h1>
                 <p>Welcome to eyeSee the Institute of Computing Journal Viewer!</p>
