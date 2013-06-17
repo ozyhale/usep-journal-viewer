@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="{$base_url}application/views/css/bootstrap.css">
 
         <style>
+            body{
+                background: #F4F4F4;
+            }
             /*body {
                  padding-top: 60px;
                  padding-bottom: 40px;
