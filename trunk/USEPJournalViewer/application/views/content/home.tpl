@@ -68,96 +68,116 @@
         background: white;
         border-radius: 5px 5px 0px 0px;
     }
+    #car1{
+    }
 </style>
 
 <div class="row-fluid f_body">
     <div class="span3 s_body" style="width: 24%;">
-        <div id="acc_head"><center>Departments</center></div>
-        <div class="accordion" id="accordion1"style="margin-bottom: 2px;" >
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse1">
-                    Institute of Computing
-                </a>
+        <div id="acc_head"><center><b>Departments</b></center></div>
+        <div class="accordion" id="accordion1"style="margin-bottom: -1px;" >
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse1">
+                        Institute of Computing
+                    </a>
+                </div>
+                <div id="collapse1" class="accordion-body collapse">
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/1/Compendium/0">Compendium Journals</a></div>
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/1/Full-Length/0">Full Length Journals</a></div>
+                </div>
             </div>
-            <div id="collapse1" class="accordion-body collapse">
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/1/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/1/Full-Length/0">Full Length Journals</a></div>
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse2">
+                        College of Arts and Sciences
+                    </a>
+                </div>
+                <div id="collapse2" class="accordion-body collapse">
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/2/Compendium/0">Compendium Journals</a></div>
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/2/Full-Length/0">Full Length Journals</a></div>
+                </div>
             </div>
-        </div>
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse2">
-                    College of Arts and Sciences
-                </a>
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse3">
+                        College of Governance and Business
+                    </a>
+                </div>
+                <div id="collapse3" class="accordion-body collapse">
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/3/Compendium/0">Compendium Journals</a></div>
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/3/Full-Length/0">Full Length Journals</a></div>
+                </div>
             </div>
-            <div id="collapse2" class="accordion-body collapse">
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/2/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/2/Full-Length/0">Full Length Journals</a></div>
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse4">
+                        School of Applied Economics
+                    </a>
+                </div>
+                <div id="collapse4" class="accordion-body collapse">
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/4/Compendium/0">Compendium Journals</a></div>
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/4/Full-Length/0">Full Length Journals</a></div>
+                </div>
             </div>
-        </div>
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse3">
-                    College of Governance and Business
-                </a>
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse5">
+                        College of Engineering
+                    </a>
+                </div>
+                <div id="collapse5" class="accordion-body collapse">
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/5/Compendium/0">Compendium Journals</a></div>
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/5/Full-Length/0">Full Length Journals</a></div>
+                </div>
             </div>
-            <div id="collapse3" class="accordion-body collapse">
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/3/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/3/Full-Length/0">Full Length Journals</a></div>
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse6">
+                        College of Technology
+                    </a>
+                </div>
+                <div id="collapse6" class="accordion-body collapse">
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/6/Compendium/0">Compendium Journals</a></div>
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/6/Full-Length/0">Full Length Journals</a></div>
+                </div>
             </div>
-        </div>
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse4">
-                    School of Applied Economics
-                </a>
-            </div>
-            <div id="collapse4" class="accordion-body collapse">
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/4/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/4/Full-Length/0">Full Length Journals</a></div>
-            </div>
-        </div>
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse5">
-                    College of Engineering
-                </a>
-            </div>
-            <div id="collapse5" class="accordion-body collapse">
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/5/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/5/Full-Length/0">Full Length Journals</a></div>
-            </div>
-        </div>
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse6">
-                    College of Technology
-                </a>
-            </div>
-            <div id="collapse6" class="accordion-body collapse">
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/6/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/6/Full-Length/0">Full Length Journals</a></div>
-            </div>
-        </div>
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse7">
-                    College of Education
-                </a>
-            </div>
-            <div id="collapse7" class="accordion-body collapse">
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/7/Compendium/0">Compendium Journals</a></div>
-                <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/7/Full-Length/0">Full Length Journals</a></div>
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse7">
+                        College of Education
+                    </a>
+                </div>
+                <div id="collapse7" class="accordion-body collapse">
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/7/Compendium/0">Compendium Journals</a></div>
+                    <div class="accordion-inner"><a id="acc_link" href="{$site_url}home/choose_journal_dept/7/Full-Length/0">Full Length Journals</a></div>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-            <div class="span9 f_cont" style="width: 73%;">
+    <div class="span9 f_cont" style="width: 73%;">
         {if isset($body_content)}
             {include file=$body_content}
         {else}
-            
+            <div id="myCarousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <img id="car1" src="{$base_url}application/views/img/journal1.png">
+                    </div>
+                    <div class="item">
+                        <img id="car1" src="{$base_url}application/views/img/journal2.png">
+                    </div>
+                    <div class="item">
+                        <img id="car1" src="{$base_url}application/views/img/journal3.png">
+                    </div>
+                </div>
+            </div>
             <div class="hero-unit f_hero">
                 <h1>Welcome...</h1>
                 <p>Welcome to eyeSee the Institute of Computing Journal Viewer!</p>

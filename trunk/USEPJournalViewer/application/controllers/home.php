@@ -153,7 +153,7 @@ class Home extends CI_Controller {
         $array_temp = array(
             '1' => 'Institute of Computing',
             '2' => 'College of Arts and Sciences',
-            '3' => 'College of Governance Business and Economics',
+            '3' => 'College of Governance and Business',
             '4' => 'School of Applied Economics',
             '5' => 'College of Engineering',
             '6' => 'College of Technology',

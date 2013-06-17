@@ -10,7 +10,7 @@
             <ul>
                 <li><a href="{$site_url}home/choose_journal_dept/1/{$_type}/1">Institute of Computing</a></li>
                 <li><a href="{$site_url}home/choose_journal_dept/2/{$_type}/1">College of Arts and Sciences</a></li>
-                <li><a href="{$site_url}home/choose_journal_dept/3/{$_type}/1">College of Governance Business and Economics</a></li>
+                <li><a href="{$site_url}home/choose_journal_dept/3/{$_type}/1">College of Governance and Business</a></li>
                 <li><a href="{$site_url}home/choose_journal_dept/4/{$_type}/1">School of Applied Economics</a></li>
                 <li><a href="{$site_url}home/choose_journal_dept/5/{$_type}/1">College of Engineering</a></li>
                 <li><a href="{$site_url}home/choose_journal_dept/6/{$_type}/1">College of Technology</a></li>
