@@ -23,7 +23,9 @@
 
 {if $list_journal|@count == 0}
     <div class="alert alert-info">
+        <!--
         <button type="button" class="close" data-dismiss="alert">&times;</button>
+        -->
         <h4>Information!</h4>
         No Journal has been uploaded yet... 
     </div>
@@ -31,9 +33,9 @@
 
 <ol class="thumbnails">
     {foreach from=$list_journal key=k item=l}
-        <li class="span4" style="margin-left: 10px;">
-            <div class="thumbnail f_thumb" style="height: 160px;">
-                <center><img style="cursor: pointer; border: none; max-height: 150px; width: 200px;" data-src="holder.js/160x120" alt="" src="{$base_url}{$list_journal[$k]['cover_page']}" onclick="_target('{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}/{$_deptID}')"></center>
+        <li class="span2" style="margin-left: 10px;">
+            <div class="thumbnail f_thumb">
+                <center><img style="cursor: pointer; border: none; min-height: 150px; min-width: 75px; max-height: 200px; max-width: 90px; margin-left: 2px; margin-right: 2px;" data-src="holder.js/160x120" alt="" src="{$base_url}{$list_journal[$k]['cover_page']}" onclick="_target('{$site_url}pdfviewer/view_pdf/{$list_journal[$k]['id']}/{$_deptID}')"></center>
             </div>
         </li>
     {/foreach}

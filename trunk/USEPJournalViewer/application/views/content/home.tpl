@@ -69,6 +69,13 @@
         border-radius: 5px 5px 0px 0px;
     }
     #car1{
+        background: #e8e8e8;
+        background: -moz-linear-gradient(-45deg, #e8e8e8 0%, #207cca 21%, #e8e8e8 37%, #207cca 53%, #e8e8e8 68%, #207cca 88%, #7db9e8 100%);
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#e8e8e8), color-stop(21%,#207cca), color-stop(37%,#e8e8e8), color-stop(53%,#207cca), color-stop(68%,#e8e8e8), color-stop(88%,#207cca), color-stop(100%,#7db9e8));
+        background: -webkit-linear-gradient(-45deg, #e8e8e8 0%,#207cca 21%,#e8e8e8 37%,#207cca 53%,#e8e8e8 68%,#207cca 88%,#7db9e8 100%);
+        background: -o-linear-gradient(-45deg, #e8e8e8 0%,#207cca 21%,#e8e8e8 37%,#207cca 53%,#e8e8e8 68%,#207cca 88%,#7db9e8 100%);
+        background: -ms-linear-gradient(-45deg, #e8e8e8 0%,#207cca 21%,#e8e8e8 37%,#207cca 53%,#e8e8e8 68%,#207cca 88%,#7db9e8 100%);
+        background: linear-gradient(135deg, #e8e8e8 0%,#207cca 21%,#e8e8e8 37%,#207cca 53%,#e8e8e8 68%,#207cca 88%,#7db9e8 100%);
     }
 </style>
 
@@ -168,20 +175,22 @@
                 <!-- Carousel items -->
                 <div class="carousel-inner">
                     <div class="active item">
-                        <img id="car1" src="{$base_url}application/views/img/journal1.png">
+                        <img id="car1" src="{$base_url}application/views/img/journal1.png" style="height: 80%">
                     </div>
                     <div class="item">
-                        <img id="car1" src="{$base_url}application/views/img/journal2.png">
+                        <img id="car1" src="{$base_url}application/views/img/journal2.png" style="height: 80%">
                     </div>
                     <div class="item">
-                        <img id="car1" src="{$base_url}application/views/img/journal3.png">
+                        <img id="car1" src="{$base_url}application/views/img/journal3.png" style="height: 80%">
                     </div>
                 </div>
             </div>
             <div class="hero-unit f_hero">
+                <center><legend class="text-info">USeP Journal Viewer - HOME</legend></center>
                 <h1>Welcome...</h1>
                 <p>Welcome to eyeSee the Institute of Computing Journal Viewer!</p>
                 <br/><br/>
+            </div>
             </div>
         {/if}
 
