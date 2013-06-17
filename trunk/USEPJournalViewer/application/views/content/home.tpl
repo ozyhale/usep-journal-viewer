@@ -54,12 +54,26 @@
         margin-left: 25%;
     }
     .f_cont{
-        padding-left: 5px;
+        padding-left: -3px;
+    }
+    #acc_head{
+        background: grey;
+        color: white;
+        margin-bottom: 2px;
+        padding: 4px 2px 4px 2px;
+        border-radius: 5px 5px 0px 0px;
+    }
+    .s_body{
+        border: 1px solid #000;
+        background: white;
+        border-radius: 5px 5px 0px 0px;
     }
 </style>
 
 <div class="row-fluid f_body">
-    <div class="accordion span3" id="accordion1">
+    <div class="span3 s_body" style="width: 24%;">
+        <div id="acc_head"><center>Departments</center></div>
+        <div class="accordion" id="accordion1"style="margin-bottom: 2px;" >
         <div class="accordion-group">
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse1">
@@ -138,7 +152,8 @@
             </div>
         </div>
     </div>
-    <div class="span9 f_cont">
+    </div>
+            <div class="span9 f_cont" style="width: 73%;">
         {if isset($body_content)}
             {include file=$body_content}
         {else}
