@@ -172,9 +172,13 @@
             }
             
             .f_hero{
-                background: -moz-linear-gradient(top, #cedbe9 0%, #aac5de 24%, #419ad6 60%, #4bb8f0 90%, #26558b 100%);
-                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cedbe9), color-stop(24%, #aac5de), color-stop(60%, #419ad6), color-stop(90%, #4bb8f0), color-stop(100%, #26558b));
-                background: -o-linear-gradient(top, #cedbe9 0%, #aac5de 24%, #419ad6 60%, #4bb8f0 90%, #26558b 100%);
+                background: #e8e8e8;
+                background: -moz-linear-gradient(top, #e8e8e8 0%, #e8e8e8 15%, #207cca 73%, #7db9e8 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(15%,#e8e8e8), color-stop(73%,#207cca), color-stop(100%,#7db9e8));
+                background: -webkit-linear-gradient(top, #e8e8e8 0%,#e8e8e8 15%,#207cca 73%,#7db9e8 100%);
+                background: -o-linear-gradient(top, #e8e8e8 0%,#e8e8e8 15%,#207cca 73%,#7db9e8 100%);
+                background: -ms-linear-gradient(top, #e8e8e8 0%,#e8e8e8 15%,#207cca 73%,#7db9e8 100%);
+                background: linear-gradient(to bottom, #e8e8e8 0%,#e8e8e8 15%,#207cca 73%,#7db9e8 100%);
                 box-shadow: 5px 5px 8px 2px #26557a;
                 -webkit-box-shadow: 5px 5px 8px 2px #26557a;
                 margin-top: 5px;
@@ -182,6 +186,8 @@
                 margin-bottom: 5px;
                 opacity: 0.8;
                 width: 82%;
+                padding-top: 1px;
+                border-radius: 5px;
             }
 
             #f_title{
@@ -206,7 +212,10 @@
                 background: -moz-linear-gradient(top, #ebf1f6 0%, #abd3ee 80%, #89c3eb 100%);
                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ebf1f6), color-stop(80%, #abd3ee), color-stop(100%, #89c3eb));
                 background: -o-linear-gradient(top, #ebf1f6 0%, #abd3ee 80%, #89c3eb 100%);
-                max-height: 500px;
+                min-height: 100px;
+                min-width: 75px;
+                max-height: 200px;
+                max-width: 100px;
                 
             }
 
@@ -225,9 +234,10 @@
             }
             
             .f_body{
-                min-height: 600px;
+                min-height: 400px;
                 background: #F9FAFB url('{$base_url}application/views/img/bg.png') scroll no-repeat;
-                background-position:left center;
+                background-size: 75% 75%;
+                background-position:center center;
             }
         </style>
         <!-- ------------------- end of css ------------------------ -->
