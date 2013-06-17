@@ -229,7 +229,6 @@
                 background: #F9FAFB url('{$base_url}application/views/img/bg.png') scroll no-repeat;
                 background-position:left center;
             }
-            
         </style>
         <!-- ------------------- end of css ------------------------ -->
 
